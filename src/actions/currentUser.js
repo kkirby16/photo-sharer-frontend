@@ -8,20 +8,20 @@ export const setCurrentUser = (user) => {
 
 //asynchronous action creators
 
-export const login = credentials => {
+export const login = (credentials) => {
   return (dispatch) => {
+    console.log(credentials);
     //could dispatch before the fetch something like "loading/getting current user"
     return fetch("http://localhost:4500/api/v1/login", {
-    method: "POST", 
-    headers: { 
-        "Content-Type": "application/json"
-
-    },
-    body: JSON.stringify({username: "kkirby16", password: "password" })
-    //can dispatch as needed in this fetch.
-  }}
-}
-}
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(credentials),
+      //can dispatch as needed in this fetch.
+    });
+  };
+};
 
 //login action will be asynchronous because we need to send a request to our backend in order to login.
 
