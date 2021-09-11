@@ -9,8 +9,9 @@ export const setCurrentUser = (user) => {
 //asynchronous action creators
 
 export const login = (credentials) => {
+  console.log(credentials);
+
   return (dispatch) => {
-    console.log(credentials);
     //could dispatch before the fetch something like "loading/getting current user"
     return fetch("http://localhost:4500/api/v1/login", {
       method: "POST",
@@ -19,7 +20,17 @@ export const login = (credentials) => {
       },
       body: JSON.stringify(credentials),
       //can dispatch as needed in this fetch.
-    });
+    })
+      .then((r) => r.json()) //we return json of a user if the user was successful.
+      .then((user) => {
+        if (user.error) {
+          alert(user.error);
+          //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller happened."
+        } else {
+          dispatch(setCurrentUser(user));
+        }
+      })
+      .catch(console.log); //if something goes wrong in the javascript end..
   };
 };
 
