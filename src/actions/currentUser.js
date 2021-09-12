@@ -6,6 +6,14 @@ export const setCurrentUser = (user) => {
   };
 };
 
+export const clearCurrentUser = () => {
+  //still on frontend need to clear out the user.
+  return {
+    type: "CLEAR_CURRENT_USER",
+  };
+};
+//getting rid of the current user that was sitting in our redux store.
+
 //asynchronous action creators
 
 export const login = (credentials) => {
@@ -32,6 +40,19 @@ export const login = (credentials) => {
         }
       })
       .catch(console.log); //if something goes wrong in the javascript end..
+  };
+};
+
+export const logout = () => {
+  //this action creator is just clearing our session.
+  //return a function from async action creators using thunk
+  //if user clicked log out, we should go ahead and log them out right away on the frontend.
+  return (dispatch) => {
+    dispatch(clearCurrentUser()); //have to invoke it to get your action
+    return fetch("http://localhost:4500/api/v1/logout", {
+      credentials: "include", //sends our cookies back.
+      method: "DELETE",
+    });
   };
 };
 
