@@ -1,17 +1,25 @@
 import "./App.css";
 import { render } from "@testing-library/react";
 import React from "react";
-import Login from "./components/Login.js";
+
 import { connect } from "react-redux";
 import { getCurrentUser } from "./actions/currentUser.js";
+import NavBar from "./components/NavBar.js";
 
 class App extends React.Component {
+  //using a class for this because we want our lifecycle method.
+
   componentDidMount() {
     this.props.getCurrentUser();
   }
+  //need to get the user that getCurrentUser loads into the redux store so App.js has the current user.
 
   render() {
-    return <Login />;
+    //think about refactoring this to a navbar.
+    return <NavBar />; //nav should have the welcome user and login/logout functionality.
+    // <MainContainer/>
+    // {/*main container might have a couple different components in it. */}
+    // <Footer/>
   }
 }
 
