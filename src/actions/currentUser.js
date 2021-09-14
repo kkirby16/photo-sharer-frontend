@@ -31,12 +31,12 @@ export const login = (credentials) => {
       //can dispatch as needed in this fetch.
     })
       .then((r) => r.json()) //we return json of a user if the user was successful.
-      .then((user) => {
-        if (user.error) {
-          alert(user.error);
+      .then((response) => {
+        if (response.error) {
+          alert(response.error);
           //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller happened."
         } else {
-          dispatch(setCurrentUser(user));
+          dispatch(setCurrentUser(response.data));
         }
       })
       .catch(console.log); //if something goes wrong in the javascript end..
@@ -67,11 +67,11 @@ export const getCurrentUser = () => {
       },
     })
       .then((r) => r.json())
-      .then((user) => {
-        if (user.error) {
-          alert(user.error);
+      .then((response) => {
+        if (response.error) {
+          alert(response.error);
         } else {
-          dispatch(setCurrentUser(user));
+          dispatch(setCurrentUser(response.data));
         }
       })
       .catch(console.log);
