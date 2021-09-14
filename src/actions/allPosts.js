@@ -25,5 +25,12 @@ export const getAllPosts = () => {
   };
 };
 
+export const clearAllPosts = () => {
+  return {
+    type: "CLEAR_ALL_POSTS",
+    //shorthand syntax (really user: user)
+  };
+};
+
 //before you think about populating this piece of state with anything, you always want to get it into the store first so that you can see that the name and the data type are correct
 //build the reducer first, then add it to the store so you see it, and then build your action creator.
