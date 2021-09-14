@@ -1,4 +1,7 @@
 //synchronous action creators
+import { resetLoginForm } from "./loginForm.js";
+import { getAllPosts } from "./allPosts.js";
+
 export const setCurrentUser = (user) => {
   return {
     type: "SET_CURRENT_USER",
@@ -37,6 +40,8 @@ export const login = (credentials) => {
           //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller happened."
         } else {
           dispatch(setCurrentUser(response.data));
+          dispatch(resetLoginForm());
+          dispatch(getAllPosts());
         }
       })
       .catch(console.log); //if something goes wrong in the javascript end..
