@@ -1,6 +1,7 @@
 //synchronous action creators
 import { resetLoginForm } from "./loginForm.js";
 import { getAllPosts } from "./allPosts.js";
+import { clearAllPosts } from "./allPosts.js";
 
 export const setCurrentUser = (user) => {
   return {
@@ -54,6 +55,7 @@ export const logout = () => {
   //if user clicked log out, we should go ahead and log them out right away on the frontend.
   return (dispatch) => {
     dispatch(clearCurrentUser()); //have to invoke it to get your action
+    dispatch(clearAllPosts());
     return fetch("http://localhost:4500/api/v1/logout", {
       credentials: "include", //sends our cookies back.
       method: "DELETE",
