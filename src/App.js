@@ -24,7 +24,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        <MainContainer />
+        <MainContainer
+          posts={this.props.posts}
+          currentUser={this.props.currentUser}
+        />
       </div>
     );
     //think about refactoring this to a navbar.
@@ -39,6 +42,7 @@ class App extends React.Component {
 const mapStateToProps = (state) => {
   return {
     posts: state.allPosts,
+    currentUser: state.currentUser,
   };
 };
 
