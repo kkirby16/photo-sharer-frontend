@@ -3,25 +3,29 @@ import Post from "./Post.js";
 // import Review from "./Review";
 
 class Posts extends Component {
-  //     return matchingReviews.map((review) => {
-  //       return (
-  //         <Review
-  //           key={review.id}
-  //           review={review}
-  //           deleteReview={this.props.deleteReview}
-  //         />
-  //       );
-  //     });
-  //   };
+  renderPosts = () => {
+    if (this.props.currentUser !== null && !this.props.posts.error) {
+      return (
+        this.props.posts &&
+        this.props.posts.map((post) => {
+          return (
+            <Post
+              key={post.id}
+              post={post}
+
+              // //   review={review}
+              // //   deleteReview={this.props.deleteReview}
+            />
+          );
+        })
+      );
+    } else {
+      return [];
+    }
+  };
 
   render() {
-    return (
-      <ul>
-        {this.props.posts.map((post) => {
-          return <Post />;
-        })}
-      </ul>
-    );
+    return <ul>{this.renderPosts()}</ul>;
   }
 }
 
