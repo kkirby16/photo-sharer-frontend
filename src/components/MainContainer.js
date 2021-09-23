@@ -1,5 +1,6 @@
 import React from "react";
 import Posts from "./Posts.js";
+import PostInput from "./PostInput.js";
 
 const MainContainer = (props) => {
   console.log("props:", props.posts);
@@ -7,6 +8,7 @@ const MainContainer = (props) => {
     return (
       <div className="MainContainer">
         <Posts posts={props.posts} currentUser={props.currentUser} />
+        <PostInput addPost={props.addPost} currentUser={props.currentUser} />
       </div> //good idea for the main thing that is being returned from each component to get a div of the name of the component spelled the exact same way.
     );
   } else return null;

@@ -12,6 +12,7 @@ class Posts extends Component {
             <Post
               key={post.id}
               post={post}
+              currentUser={this.props.currentUser}
 
               // //   review={review}
               // //   deleteReview={this.props.deleteReview}

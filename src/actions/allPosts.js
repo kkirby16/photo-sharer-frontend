@@ -10,7 +10,7 @@ export const setAllPosts = (posts) => {
 export const getAllPosts = () => {
   //or should this be called getAllPosts?
   return (dispatch) => {
-    return fetch("http://localhost:4500/api/v1/get_all_posts", {
+    return fetch("http://localhost:4500/api/v1/posts", {
       credentials: "include",
       //say this for when you need to send an authenticated or authorized request of some sort.
       method: "GET",
@@ -20,7 +20,7 @@ export const getAllPosts = () => {
     })
       .then((r) => r.json())
       .then((response) => {
-        dispatch(setAllPosts(response));
+        dispatch(setAllPosts(response.data));
       });
   };
 };
@@ -29,6 +29,39 @@ export const clearAllPosts = () => {
   return {
     type: "CLEAR_ALL_POSTS",
     //shorthand syntax (really user: user)
+  };
+};
+
+export const setNewPost = (post) => {
+  return {
+    type: "SET_NEW_POST",
+    post,
+  };
+};
+
+export const addPost = (post) => {
+  return (dispatch) => {
+    //could dispatch before the fetch something like "loading/getting current user"
+    return fetch("http://localhost:4500/api/v1/posts", {
+      credentials: "include", //put credentials: "include" in every fetch.
+      method: "POST",
+      headers: {
+        // "Content-Type": "application/json",
+      },
+      body: post,
+      //can dispatch as needed in this fetch.
+    })
+      .then((r) => r.json()) //we return json of a user if the user was successful.
+      .then((response) => {
+        if (response.error) {
+          alert(response.error);
+          //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller happened."
+        } else {
+          console.log("FETCH RESPONSE", response);
+          dispatch(setNewPost(response.data));
+        }
+      })
+      .catch(console.log); //if something goes wrong in the javascript end..
   };
 };
 
