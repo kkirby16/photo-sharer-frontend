@@ -5,13 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./store.js";
+import { BrowserRouter as Router } from "react-router-dom";
 
 //doing these steps of creating a fake reducer for now to get redux standing up on its feet. edit: we took these steps out.
 //howard prefers to build his store in a file called store.
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById("root")
 );
