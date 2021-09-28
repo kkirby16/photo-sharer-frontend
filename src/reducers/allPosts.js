@@ -8,6 +8,8 @@ export default (state = [], action) => {
       return [...state, action.post];
     case "SET_NEW_POST":
       return [...state, action.post];
+    case "CLEAR_POST":
+      return state.filter((post) => post.id !== action.postId);
     default:
       return state; //should I have a different default here since I always want posts to be returned?
   }

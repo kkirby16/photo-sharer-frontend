@@ -1,10 +1,20 @@
 import React, { Component } from "react";
 import Comments from "./Comments.js";
 import CommentInput from "./CommentInput";
+import { removePost } from "../actions/allPosts";
+import { connect } from "react-redux";
 
 class Post extends Component {
+  can_delete_post = () => {
+    if (this.props.currentUser.id == this.props.post.attributes.user.id) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   render() {
-    console.log("NEW LOG", this.props.post);
+    console.log("***NEWEST LOG", this.props.post.id);
     // const { image_url, caption, likes } = this.props.post.attributes;
     return (
       <ul className="Post_ul">
@@ -21,6 +31,17 @@ class Post extends Component {
         Caption: <li>{this.props.post.attributes.caption}</li>
         <br></br>
         Amount of likes: <li>{this.props.post.attributes.likes}</li>
+        {this.can_delete_post() === true ? (
+          <button
+            type="button"
+            onClick={() => {
+              this.props.removePost(this.props.post.id);
+            }}
+          >
+            Delete Post
+          </button>
+        ) : null}
+        <br></br>
         <br></br>
         <CommentInput post={this.props.post} />
         <Comments
@@ -36,4 +57,4 @@ class Post extends Component {
   }
 }
 
-export default Post;
+export default connect(null, { removePost })(Post);
