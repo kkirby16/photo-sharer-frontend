@@ -1,5 +1,7 @@
 //synchronous action creators
 import { resetLoginForm } from "./loginForm.js";
+import { resetSignupForm } from "./signupForm.js";
+
 import { getAllPosts } from "./allPosts.js";
 import { clearAllPosts } from "./allPosts.js";
 
@@ -20,8 +22,8 @@ export const clearCurrentUser = () => {
 
 //asynchronous action creators
 
-export const login = (credentials) => {
-  console.log(credentials);
+export const login = (credentials, history) => {
+  console.log(credentials); //also taking history object from props.
 
   return (dispatch) => {
     //could dispatch before the fetch something like "loading/getting current user"
@@ -43,6 +45,42 @@ export const login = (credentials) => {
           dispatch(setCurrentUser(response.data));
           dispatch(resetLoginForm());
           dispatch(getAllPosts());
+          history.push("/"); //can do this to change the url once I've successfully logged in.
+          console.log("HISTORY!", history);
+        } //history is a mutable object that we are allowed to change on the fly.
+      })
+      .catch(console.log); //if something goes wrong in the javascript end..
+  };
+};
+
+export const signup = (credentials, history) => {
+  //passing credentials along as an object
+  console.log(credentials);
+
+  return (dispatch) => {
+    const userInfo = {
+      user: credentials, //this credentials should have all those top level keys under user.
+    };
+    //could dispatch before the fetch something like "loading/getting current user"
+    return fetch("http://localhost:4500/api/v1/signup", {
+      credentials: "include", //put credentials: "include" in every fetch.
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userInfo),
+      //can dispatch as needed in this fetch.
+    })
+      .then((r) => r.json()) //we return json of a user if the user was successful.
+      .then((response) => {
+        if (response.error) {
+          alert(response.error);
+          //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller happened."
+        } else {
+          dispatch(setCurrentUser(response.data));
+          dispatch(resetSignupForm());
+          dispatch(getAllPosts());
+          history.push("/");
         }
       })
       .catch(console.log); //if something goes wrong in the javascript end..
