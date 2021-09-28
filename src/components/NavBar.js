@@ -15,7 +15,6 @@ const NavBar = ({ currentUser }) => {
       ) : (
         ""
       )}
-      {currentUser ? <Logout /> : <Login />}
     </div>
   );
 };
