@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { updateLoginForm } from "../actions/loginForm.js";
 import { login } from "../actions/currentUser.js";
 import { Link } from "react-router-dom";
+import "./myStyles.css";
 
 //props get passed into a functional component as an argument and they will also come in as an object.
 const Login = ({ loginFormData, updateLoginForm, login, history }) => {
@@ -26,6 +27,8 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
     //the third destructured variable above is a beefed up reduxed version of that action creator
     <div>
       <Link to="/">Back to home</Link>
+      <br></br>
+      <br></br>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="username"
