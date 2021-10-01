@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import Comments from "./Comments.js";
-import CommentInput from "./CommentInput";
+import { addComment } from "../actions/allPosts.js";
 import { removePost } from "../actions/allPosts";
+import CommentInput from "./CommentInput.js";
 import { connect } from "react-redux";
+import "./myStyles.css";
+import { Icon } from "@iconify/react";
 
 class Post extends Component {
   can_delete_post = () => {
@@ -14,45 +17,64 @@ class Post extends Component {
   };
 
   render() {
-    console.log("***NEWEST LOG", this.props.post.id);
+    // console.log("***NEWEST LOG", this.props.post.id);
+    // console.log("OUR COMMENTS", this.props.post.attributes.comments);
     // const { image_url, caption, likes } = this.props.post.attributes;
     return (
-      <ul className="Post_ul">
-        {this.props.post.attributes.image_url ? (
-          <img src={this.props.post.attributes.image_url}></img>
-        ) : (
-          <img
-            src={this.props.post.attributes.image.record.seeded_image_data}
-          ></img>
-        )}
-        <br></br>
-        Posted by: <li>{this.props.post.attributes.user.username}</li>
-        <br></br>
-        Caption: <li>{this.props.post.attributes.caption}</li>
-        <br></br>
-        Amount of likes: <li>{this.props.post.attributes.likes}</li>
-        {this.can_delete_post() === true ? (
-          <button
-            type="button"
-            onClick={() => {
-              this.props.removePost(this.props.post.id);
-            }}
-          >
-            Delete Post
-          </button>
-        ) : null}
-        <br></br>
-        <br></br>
-        <CommentInput post={this.props.post} />
-        <Comments
-          comments={this.props.post.comments}
-          currentUser={this.props.currentUser}
-          post={this.props.post}
-        />
-        <br></br>
-        <br></br>
-        <br></br>
-      </ul>
+      <div>
+        <ul className="Post_ul">
+          {this.props.post.attributes.image_url ? (
+            <img
+              src={this.props.post.attributes.image_url}
+              className="fitImage"
+            ></img>
+          ) : (
+            <img
+              src={this.props.post.attributes.image.record.seeded_image_data}
+              className="fitImage"
+            ></img>
+          )}
+          <br></br>
+          <li>
+            <strong className="usernameAndCaption">
+              {this.props.post.attributes.user.username}:
+            </strong>{" "}
+            <span className="usernameAndCaption">
+              {this.props.post.attributes.caption}{" "}
+            </span>
+          </li>
+          {this.can_delete_post() === true ? (
+            <Icon
+              icon="octicon:trash-24"
+              width="22"
+              height="22"
+              className="deleteButton"
+              type="button"
+              onClick={() => {
+                this.props.removePost(this.props.post.id);
+              }}
+            >
+              {" "}
+            </Icon>
+          ) : null}
+          Likes: {this.props.post.attributes.likes}
+          <br></br>
+          <br></br>
+          <CommentInput post={this.props.post} />
+          <br></br>
+          <u>Comments</u>
+          <br></br>
+          <br></br>
+          <Comments
+            comments={this.props.post.attributes.comments}
+            currentUser={this.props.currentUser}
+            post={this.props.post}
+          />
+          <br></br>
+          <br></br>
+          <br></br>
+        </ul>
+      </div>
     );
   }
 }
