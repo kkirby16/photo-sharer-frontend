@@ -18,6 +18,7 @@ import {
   Switch,
   withRouter,
 } from "react-router-dom";
+import "./components/myStyles.css";
 
 class App extends React.Component {
   //using a class for this because we want our lifecycle method.
@@ -47,7 +48,6 @@ class App extends React.Component {
             render={(props) => (
               <MainContainer
                 {...props}
-                posts={this.props.posts}
                 currentUser={this.props.currentUser}
                 addPost={this.props.addPost}
               />
