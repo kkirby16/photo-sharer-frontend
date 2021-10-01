@@ -5,12 +5,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import { logout } from "../actions/currentUser.js";
+import "./myStyles.css";
 
 //props get passed into a functional component as an argument and they will also come in as an object.
 const Logout = ({ logout }) => {
   return (
     <form onSubmit={logout}>
-      <input type="submit" value="Log Out" />
+      <input className="logoutButton" type="submit" value="Log Out" />
     </form>
   );
 };

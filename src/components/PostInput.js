@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { addPost } from "../actions/allPosts";
+import "./myStyles.css";
 
 class PostInput extends Component {
   state = {
@@ -53,22 +54,23 @@ class PostInput extends Component {
   render() {
     return (
       <div>
+        <p>Upload Post:</p>
         <form>
-          <label htmlFor="photo">Photo</label>
+          <label htmlFor="photo">Photo: </label>
           <input
             type="file"
             name="image"
             accept="image/*"
             onChange={this.handleImageChange}
           />
-          <label htmlFor="caption">Caption</label>
+          <label htmlFor="caption">Caption: </label>
           <input
             name="caption"
             type="text"
             value={this.state.caption}
             onChange={this.handleChange}
           />
-          <label htmlFor="submit">Create Post</label>
+          <label htmlFor="submit">Create Post: </label>
           <input name="submit" type="submit" onClick={this.handleSubmit} />
         </form>
       </div>
