@@ -1,0 +1,93 @@
+h1,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+button {
+  font-family: "Dosis", sans-serif;
+  color: black;
+}
+
+.or_text {
+  font-family: "Recoleta Alt";
+  font-size: 20px;
+  color: white;
+  position: relative;
+  top: -20px;
+}
+
+.interact_word {
+  font-family: "Recoleta Alt";
+  color: rgb(218, 185, 116);
+  /* color: rgb(202, 152, 69); */
+}
+
+.home_page_text {
+  font-family: "Recoleta Alt";
+  font-size: 23px;
+  color: white;
+}
+
+.home_page_title_text {
+  font-family: "Nature Spirit";
+  font-size: 123px;
+  color: white;
+  font-weight: 900;
+  position: relative;
+  top: 26px;
+}
+
+.homepage_signup_login_text {
+  font-family: "Recoleta Alt";
+  font-size: 50px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.image_size {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.no_bullet_point_lis {
+  list-style-type: none;
+}
+
+.backgroundImage {
+  background-image: url("https://blog.society6.com/app/uploads/2019/08/18484148_10869533.jpg");
+  background-position: "center";
+  background-repeat: "no-repeat";
+  background-size: "cover";
+  width: 100%;
+  height: 100vh;
+}
+
+.fitImage {
+  width: 48%;
+  height: auto;
+}
+
+.deleteButton {
+  position: relative;
+  bottom: 16px;
+  left: 270px;
+}
+
+.deleteButton:hover {
+  color: rgb(104, 104, 104);
+}
+
+.usernameAndCaption {
+  position: relative;
+  right: 210px;
+}
+
+.logoutButton {
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+}
