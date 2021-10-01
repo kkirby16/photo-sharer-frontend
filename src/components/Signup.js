@@ -4,6 +4,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { signup } from "../actions/currentUser.js";
 import { updateSignupForm } from "../actions/signupForm.js";
+import { Link } from "react-router-dom";
+import "./myStyles.css";
+
 // import { signup } from "../actions/currentUser.js";
 
 const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
@@ -23,30 +26,35 @@ const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        placeholder="name"
-        value={signupFormData.name}
-        name="name"
-        type="text"
-        onChange={handleInputChange}
-      />
-      <input
-        placeholder="username"
-        value={signupFormData.username}
-        name="username"
-        type="text"
-        onChange={handleInputChange}
-      />
-      <input
-        placeholder="password"
-        value={signupFormData.password} //our value makes this a controlled input.
-        name="password"
-        type="text"
-        onChange={handleInputChange} //<-- when we have a callback to an event we automatically get the event as an argument.
-      />
-      <input type="submit" value="Sign Up" />
-    </form>
+    <div>
+      <Link to="/">Back to home</Link>
+      <br></br>
+      <br></br>
+      <form onSubmit={handleSubmit}>
+        <input
+          placeholder="name"
+          value={signupFormData.name}
+          name="name"
+          type="text"
+          onChange={handleInputChange}
+        />
+        <input
+          placeholder="username"
+          value={signupFormData.username}
+          name="username"
+          type="text"
+          onChange={handleInputChange}
+        />
+        <input
+          placeholder="password"
+          value={signupFormData.password} //our value makes this a controlled input.
+          name="password"
+          type="text"
+          onChange={handleInputChange} //<-- when we have a callback to an event we automatically get the event as an argument.
+        />
+        <input type="submit" value="Sign Up" />
+      </form>
+    </div>
   );
 }; //history object and has a collection of all the links you've been to.
 
