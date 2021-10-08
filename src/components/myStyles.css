@@ -5,8 +5,9 @@ h5,
 h6,
 p,
 label,
+input,
 button {
-  font-family: "Dosis", sans-serif;
+  font-family: "Neue Helvetica";
   color: black;
 }
 
@@ -66,8 +67,27 @@ button {
   height: 100vh;
 }
 
+.backgroundImageForLogin {
+  background-image: url("https://petapixel.com/assets/uploads/2021/08/kevin-russ-iphone-landscape-photography-petapixel-11_1.jpg");
+  background-position: "center";
+  background-repeat: "no-repeat";
+  background-size: "cover";
+  width: 100%;
+  height: 100vh;
+}
+
+.backgroundImageForSignup {
+  background-image: url("https://photos.smugmug.com/photos/i-9dK7PhM/0/X4/i-9dK7PhM-X4.jpg");
+  background-position: "center";
+  background-repeat: "no-repeat";
+  background-size: "cover";
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+
 .fitImage {
-  width: 48%;
+  width: 42%;
   height: auto;
 }
 
@@ -89,5 +109,232 @@ button {
 .logoutButton {
   float: right;
   margin-right: 20px;
-  margin-top: 15px;
+  margin-top: 12px;
+}
+
+.mainPageTitleText {
+  font-family: "Nature Spirit";
+  font-size: 33px;
+  color: black;
+  font-weight: 300;
+  position: relative;
+  top: 10px;
+  right: 485px;
+}
+
+.textForComments {
+  font-family: "Neue Helvetica";
+  font-weight: 500;
+}
+
+.textForPosts {
+  font-family: "Neue Helvetica";
+  font-weight: 500;
+}
+
+.textForWelcome {
+  font-family: "Neue Helvetica";
+  font-size: 18px;
+  font-weight: 500;
+  float: left;
+  margin-top: 1%;
+}
+
+.commentInput {
+  font-family: "Neue Helvetica";
+  font-weight: 200;
+}
+
+.heavierWeightNeueHelvetica {
+  font-family: "Neue Helvetica";
+  font-weight: 700;
+}
+
+.deleteCommentButton {
+  position: relative;
+  bottom: 16px;
+  left: 268px;
+}
+
+.deleteCommentButton:hover {
+  color: rgb(104, 104, 104);
+}
+
+.wordWrap {
+  word-wrap: break-word;
+  width: 500px;
+  margin: auto;
+  position: relative;
+  left: -22px;
+}
+
+.styledLoginLink {
+  color: white;
+  font-family: "Recoleta Alt";
+  font-size: 17px;
+  text-decoration: none;
+  position: absolute;
+  left: 37%;
+  bottom: 6%;
+}
+
+.styledLoginLink:hover {
+  color: white;
+  font-family: "Recoleta Alt";
+  text-decoration: underline;
+}
+
+.styledSignupLink {
+  color: white;
+  font-family: "Recoleta Alt";
+  font-size: 17px;
+  text-decoration: none;
+  position: absolute;
+  left: 37%;
+  bottom: 6%;
+}
+
+.styledSignupLink:hover {
+  color: white;
+  font-family: "Recoleta Alt";
+  text-decoration: underline;
+}
+
+.loginAndSignupInputs {
+  margin-bottom: 5px;
+  /* border-width: 1px; */
+  /* border-radius: 2.5px; */
+  width: 215px;
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.loginForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 260px;
+  padding: 80px 40px;
+  /* background: rgba(74, 74, 75, 0.493); */
+  background: rgba(0, 0, 0, 0.35);
+  /* background: rgba(9, 44, 2, 0.39); */
+
+  backdrop-filter: blur(4px);
+  border-radius: 1.5px;
+}
+
+.signupForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 260px;
+  padding: 80px 40px;
+  /* background: rgba(74, 74, 75, 0.493); */
+  background: rgba(0, 0, 0, 0.35);
+  /* background: rgba(9, 44, 2, 0.39); */
+
+  backdrop-filter: blur(2.5px);
+  border-radius: 1.5px;
+}
+
+.loginForm input[type="text"],
+.loginForm input[type="password"],
+.signupForm input[type="name"],
+.signupForm input[type="text"],
+.signupForm input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.loginForm input::placeholder,
+.signupForm input::placeholder {
+  color: rgb(232, 232, 232);
+}
+
+.loginForm input[type="submit"] {
+  height: 45px;
+  color: #fff;
+  font-size: 32px;
+  font-family: "Recoleta Alt";
+  background: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-top: 15%;
+}
+
+.signupForm input[type="submit"] {
+  height: 45px;
+  color: #fff;
+  font-size: 32px;
+  font-family: "Recoleta Alt";
+  background: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-top: 8%;
+}
+
+.loginForm input[type="submit"]:hover,
+.signupForm input[type="submit"]:hover {
+  text-decoration: underline;
+}
+
+.loginFormPlaceholder {
+  color: rgb(220, 220, 220);
+}
+
+.signupHr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  position: relative;
+  top: 5px;
+  padding: 0;
+}
+
+.loginHr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  position: relative;
+  bottom: -10px;
+  padding: 0;
+}
+
+.likeButton {
+  position: absolute;
+  left: 530px;
+}
+
+.unlikeButton {
+  position: absolute;
+  left: 530px;
+}
+
+.navbarHr {
+  width: 100%;
+  border-bottom: none;
 }
