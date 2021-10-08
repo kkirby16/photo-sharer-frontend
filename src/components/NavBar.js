@@ -10,12 +10,21 @@ import "./myStyles.css";
 
 const NavBar = ({ currentUser }) => {
   return (
-    <div className="NavBar">
+    <div>
       {currentUser ? (
-        <strong>Welcome, {currentUser.attributes.name}</strong>
+        <li className="no_bullet_point_lis">
+          <strong className="textForWelcome">
+            &nbsp;&nbsp; Welcome, {currentUser.name}
+          </strong>
+          <span className="mainPageTitleText">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Photo Poster
+          </span>
+        </li>
       ) : (
         ""
       )}
+      <hr className="navbarHr" />
     </div>
   );
 };
