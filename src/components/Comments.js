@@ -21,6 +21,7 @@ class Comments extends Component {
               key={comment.id}
               comment={comment}
               currentUser={this.props.currentUser}
+              post={this.props.post}
 
               // //   review={review}
               // //   deleteReview={this.props.deleteReview}
