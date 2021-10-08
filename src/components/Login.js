@@ -25,27 +25,36 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
 
   return (
     //the third destructured variable above is a beefed up reduxed version of that action creator
-    <div>
-      <Link to="/">Back to home</Link>
+    <div className="backgroundImageForLogin">
       <br></br>
       <br></br>
-      <form onSubmit={handleSubmit}>
-        <input
-          placeholder="username"
-          value={loginFormData.username}
-          name="username"
-          type="text"
-          onChange={handleInputChange}
-        />
-        <input
-          placeholder="password"
-          value={loginFormData.password} //our value makes this a controlled input.
-          name="password"
-          type="text" //the below is already the event in the () so can pass name and value from the event
-          onChange={handleInputChange} //<-- when we have a callback to an event we automatically get the event as an argument.
-        />
-        <input type="submit" value="Log In" />
-      </form>
+      <div className="loginForm">
+        <form onSubmit={handleSubmit}>
+          <input
+            placeholder="Username"
+            value={loginFormData.username}
+            name="username"
+            type="text"
+            onChange={handleInputChange}
+            className="loginAndSignupInputs"
+          />
+          <br></br>
+          <input
+            placeholder="Password"
+            value={loginFormData.password} //our value makes this a controlled input.
+            name="password"
+            type="password" //the below is already the event in the () so can pass name and value from the event
+            onChange={handleInputChange} //<-- when we have a callback to an event we automatically get the event as an argument.
+            className="loginAndSignupInputs"
+          />
+          <br></br>
+          <input type="submit" value="Log In" />
+        </form>
+        <hr className="loginHr" />
+        <Link to="/" className="styledLoginLink">
+          Back to home
+        </Link>
+      </div>
     </div>
   );
 }; //name will keep track of this when we change things.
