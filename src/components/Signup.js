@@ -26,34 +26,45 @@ const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
   };
 
   return (
-    <div>
-      <Link to="/">Back to home</Link>
+    <div className="backgroundImageForSignup">
       <br></br>
       <br></br>
-      <form onSubmit={handleSubmit}>
-        <input
-          placeholder="name"
-          value={signupFormData.name}
-          name="name"
-          type="text"
-          onChange={handleInputChange}
-        />
-        <input
-          placeholder="username"
-          value={signupFormData.username}
-          name="username"
-          type="text"
-          onChange={handleInputChange}
-        />
-        <input
-          placeholder="password"
-          value={signupFormData.password} //our value makes this a controlled input.
-          name="password"
-          type="text"
-          onChange={handleInputChange} //<-- when we have a callback to an event we automatically get the event as an argument.
-        />
-        <input type="submit" value="Sign Up" />
-      </form>
+      <div className="signupForm">
+        <form onSubmit={handleSubmit}>
+          <input
+            placeholder="Name"
+            value={signupFormData.name}
+            name="name"
+            type="text"
+            onChange={handleInputChange}
+            className="loginAndSignupInputs"
+          />
+          <br></br>
+          <input
+            placeholder="Username"
+            value={signupFormData.username}
+            name="username"
+            type="text"
+            onChange={handleInputChange}
+            className="loginAndSignupInputs"
+          />
+          <br></br>
+          <input
+            placeholder="Password"
+            value={signupFormData.password} //our value makes this a controlled input.
+            name="password"
+            type="password"
+            onChange={handleInputChange} //<-- when we have a callback to an event we automatically get the event as an argument.
+            className="loginAndSignupInputs"
+          />
+          <br></br>
+          <input type="submit" value="Sign Up" />
+        </form>
+        <hr className="signupHr" />
+        <Link to="/" className="styledSignupLink">
+          Back to Home
+        </Link>
+      </div>
     </div>
   );
 }; //history object and has a collection of all the links you've been to.
