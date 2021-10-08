@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import Comments from "./Comments.js";
 import { addComment } from "../actions/allPosts.js";
 import { removePost } from "../actions/allPosts";
+import { addLike } from "../actions/allPosts";
+import { deleteLike } from "../actions/allPosts";
+
 import CommentInput from "./CommentInput.js";
 import { connect } from "react-redux";
 import "./myStyles.css";
@@ -9,38 +12,90 @@ import { Icon } from "@iconify/react";
 
 class Post extends Component {
   can_delete_post = () => {
-    if (this.props.currentUser.id == this.props.post.attributes.user.id) {
+    if (this.props.currentUser.id == this.props.post.user.id) {
       return true;
     } else {
       return false;
     }
   };
 
+  users_like = () => {
+    // if (this.props.currentUser.likes) {
+    return this.props.post.likes.find(
+      (like) => like.user_id === this.props.currentUser.id
+    );
+    //
+  };
+
+  handle_likes = () => {
+    //if current doesn't have any likes associated with this post
+    // let post = this.props.currentUser
+    if (
+      !this.props.post.likes.some(
+        (like) => like.user_id === this.props.currentUser.id
+      )
+    ) {
+      return (
+        <Icon
+          icon="fluent:heart-20-regular"
+          width="30"
+          height="30"
+          className="likeButton"
+          onClick={() =>
+            this.props.addLike(this.props.currentUser.id, this.props.post.id)
+          }
+        />
+      );
+    } else {
+      return (
+        <Icon
+          icon="fluent:heart-20-filled"
+          width="30"
+          height="30"
+          className="unlikeButton"
+          color="#dc565a"
+          onClick={() =>
+            this.props.deleteLike(
+              this.props.currentUser.id,
+              this.props.post.id,
+              this.users_like()
+            )
+          }
+        />
+      );
+    }
+  };
+
   render() {
+    console.log("VERY NEW", this.props.post);
+    console.log("VERY NEW LOG", this.props.post.image_url);
+    // if (!this.props.post.image_url) {
+    // }
+
     // console.log("***NEWEST LOG", this.props.post.id);
-    // console.log("OUR COMMENTS", this.props.post.attributes.comments);
-    // const { image_url, caption, likes } = this.props.post.attributes;
+    // console.log("OUR COMMENTS", this.props.post.comments);
+    // const { image_url, caption, likes } = this.props.post;
     return (
       <div>
         <ul className="Post_ul">
-          {this.props.post.attributes.image_url ? (
-            <img
-              src={this.props.post.attributes.image_url}
-              className="fitImage"
-            ></img>
+          {this.props.post.image_url ? (
+            <img src={this.props.post.image_url} className="fitImage"></img>
           ) : (
             <img
-              src={this.props.post.attributes.image.record.seeded_image_data}
+              src={this.props.post.seeded_image_data}
               className="fitImage"
             ></img>
-          )}
+          )}{" "}
           <br></br>
-          <li>
+          {this.handle_likes()}
+          <br></br>
+          <br></br>
+          <li className="textForPosts">
             <strong className="usernameAndCaption">
-              {this.props.post.attributes.user.username}:
+              {this.props.post.user.username}:
             </strong>{" "}
             <span className="usernameAndCaption">
-              {this.props.post.attributes.caption}{" "}
+              {this.props.post.caption}{" "}
             </span>
           </li>
           {this.can_delete_post() === true ? (
@@ -57,19 +112,18 @@ class Post extends Component {
               {" "}
             </Icon>
           ) : null}
-          Likes: {this.props.post.attributes.likes}
-          <br></br>
-          <br></br>
+          <p>Likes: {this.props.post.likes.length}</p>
           <CommentInput post={this.props.post} />
           <br></br>
-          <u>Comments</u>
+          <u className="textForComments">Comments</u>
           <br></br>
           <br></br>
           <Comments
-            comments={this.props.post.attributes.comments}
+            comments={this.props.post.comments}
             currentUser={this.props.currentUser}
             post={this.props.post}
           />
+          <br></br>
           <br></br>
           <br></br>
           <br></br>
@@ -79,4 +133,4 @@ class Post extends Component {
   }
 }
 
-export default connect(null, { removePost })(Post);
+export default connect(null, { removePost, deleteLike, addLike })(Post);
