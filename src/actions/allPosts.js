@@ -20,7 +20,7 @@ export const getAllPosts = () => {
     })
       .then((r) => r.json())
       .then((response) => {
-        dispatch(setAllPosts(response.data));
+        dispatch(setAllPosts(response));
       });
   };
 };
@@ -54,11 +54,11 @@ export const addPost = (post) => {
       .then((r) => r.json()) //we return json of a user if the user was successful.
       .then((response) => {
         if (response.error) {
-          alert(response.error);
+          alert(response.error); //could dipatch action saying found error.
           //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller happened."
         } else {
           console.log("FETCH RESPONSE", response);
-          dispatch(setNewPost(response.data));
+          dispatch(setNewPost(response));
         }
       })
       .catch(console.log); //if something goes wrong in the javascript end..
@@ -101,6 +101,71 @@ export const addComment = (text, postId) => {
           payload: response,
         })
       );
+  };
+};
+
+export const clearComment = (postId, commentId) => {
+  return {
+    type: "CLEAR_COMMENT",
+    postId,
+    commentId,
+  };
+};
+
+export const removeComment = (postId, commentId) => {
+  return (dispatch) => {
+    return fetch(
+      `http://localhost:4500/api/v1/posts/${postId}/comments/${commentId}`,
+      {
+        credentials: "include",
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      }
+    ).then((res) => {
+      dispatch(clearComment(postId, commentId));
+    });
+  };
+};
+
+export const addLike = (user_id, post_id) => {
+  return (dispatch) => {
+    return fetch(`http://localhost:4500/api/v1/posts/${post_id}/likes`, {
+      credentials: "include",
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user_id),
+    })
+      .then((res) => res.json())
+      .then((response) =>
+        dispatch({
+          type: "ADD_LIKE",
+          payload: response,
+        })
+      );
+  };
+};
+
+export const clearLike = (user_id, post_id, users_like) => {
+  return {
+    type: "DELETE_LIKE",
+    user_id,
+    post_id,
+    users_like,
+  };
+};
+
+export const deleteLike = (user_id, post_id, users_like) => {
+  return (dispatch) => {
+    return fetch(
+      `http://localhost:4500/api/v1/posts/${post_id}/likes/${users_like.id}`,
+      {
+        credentials: "include",
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      }
+    ).then((res) => {
+      dispatch(clearLike(user_id, post_id, users_like));
+    });
   };
 };
 
