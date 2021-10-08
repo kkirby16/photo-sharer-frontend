@@ -25,7 +25,7 @@ class PostInput extends Component {
     formData.append("image", this.state.image);
     formData.append("user_id", this.props.currentUser.id);
     formData.append("caption", this.state.caption);
-    formData.append("likes", 0);
+    // formData.append("likes", 0);
 
     // configure your fetch url appropriately
     this.props.addPost(formData);
@@ -54,23 +54,26 @@ class PostInput extends Component {
   render() {
     return (
       <div>
-        <p>Upload Post:</p>
+        <br></br>
+        <p className="heavierWeightNeueHelvetica">Upload Post:</p>
         <form>
-          <label htmlFor="photo">Photo: </label>
+          <label htmlFor="photo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Photo: </label>
           <input
             type="file"
             name="image"
             accept="image/*"
             onChange={this.handleImageChange}
           />
-          <label htmlFor="caption">Caption: </label>
+          <label htmlFor="caption">&nbsp;&nbsp;&nbsp;Caption: </label>
           <input
             name="caption"
             type="text"
             value={this.state.caption}
             onChange={this.handleChange}
           />
-          <label htmlFor="submit">Create Post: </label>
+          <label htmlFor="submit">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create Post:{" "}
+          </label>
           <input name="submit" type="submit" onClick={this.handleSubmit} />
         </form>
       </div>
