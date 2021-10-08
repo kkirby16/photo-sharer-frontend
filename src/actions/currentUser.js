@@ -42,7 +42,7 @@ export const login = (credentials, history) => {
           alert(response.error);
           //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller happened."
         } else {
-          dispatch(setCurrentUser(response.data));
+          dispatch(setCurrentUser(response));
           dispatch(resetLoginForm());
           dispatch(getAllPosts());
           history.push("/"); //can do this to change the url once I've successfully logged in.
@@ -77,7 +77,7 @@ export const signup = (credentials, history) => {
           alert(response.error);
           //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller happened."
         } else {
-          dispatch(setCurrentUser(response.data));
+          dispatch(setCurrentUser(response));
           dispatch(resetSignupForm());
           dispatch(getAllPosts());
           history.push("/");
@@ -116,7 +116,7 @@ export const getCurrentUser = () => {
         if (response.error) {
           alert(response.error);
         } else {
-          dispatch(setCurrentUser(response.data));
+          dispatch(setCurrentUser(response));
         }
       })
       .catch(console.log);
