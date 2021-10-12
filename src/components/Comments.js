@@ -1,3 +1,4 @@
+import React from "react";
 import react, { Component } from "react";
 import Comment from "./Comment.js";
 import "./myStyles.css";
@@ -8,6 +9,7 @@ class Comments extends Component {
   // //       this.props.comments = nextProps.comments;
   // //     }
   // //   }
+
   renderComments = () => {
     if (this.props.currentUser != null) {
       console.log("what is this?", this.props.comments);
