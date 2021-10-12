@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { addPost } from "../actions/allPosts";
 import "./myStyles.css";
+import { Icon } from "@iconify/react";
 
 class PostInput extends Component {
   state = {
@@ -29,15 +30,6 @@ class PostInput extends Component {
 
     // configure your fetch url appropriately
     this.props.addPost(formData);
-
-    fetch("http://localhost:4500/api/v1/posts", {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        addPost(data);
-      });
   };
 
   handleSubmit = (event) => {
@@ -57,24 +49,54 @@ class PostInput extends Component {
         <br></br>
         <p className="heavierWeightNeueHelvetica">Upload Post:</p>
         <form>
-          <label htmlFor="photo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Photo: </label>
+          <label htmlFor="photo">
+            {" "}
+            <Icon
+              icon="bi:upload"
+              width="24"
+              height="24"
+              className="uploadPhotoIcon"
+            />
+            &nbsp;&nbsp;&nbsp;&nbsp;Upload Photo:{" "}
+          </label>
           <input
             type="file"
             name="image"
             accept="image/*"
             onChange={this.handleImageChange}
           />
-          <label htmlFor="caption">&nbsp;&nbsp;&nbsp;Caption: </label>
+          <label htmlFor="caption">
+            &nbsp;&nbsp;&nbsp;{" "}
+            <Icon
+              icon="fluent:text-align-left-20-regular"
+              width="30"
+              height="30"
+              className="captionIcon"
+            />
+            Caption:{" "}
+          </label>
           <input
             name="caption"
             type="text"
             value={this.state.caption}
             onChange={this.handleChange}
+            className="inputForCaption"
           />
-          <label htmlFor="submit">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create Post:{" "}
-          </label>
-          <input name="submit" type="submit" onClick={this.handleSubmit} />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button
+            name="submit"
+            type="submit"
+            onClick={this.handleSubmit}
+            className="createPostButton"
+          >
+            <Icon
+              icon="fluent:add-circle-28-filled"
+              className="createPostIcon"
+              width="23"
+              height="23"
+            />
+            Create Post
+          </button>
         </form>
       </div>
     );
