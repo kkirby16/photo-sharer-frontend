@@ -57,7 +57,6 @@ export const addPost = (post) => {
           alert(response.error); //could dipatch action saying found error.
           //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller happened."
         } else {
-          console.log("FETCH RESPONSE", response);
           dispatch(setNewPost(response));
         }
       })
