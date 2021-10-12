@@ -9,7 +9,7 @@ const MainContainer = (props) => {
   console.log("props:", props.posts);
   if (props.currentUser !== null) {
     return (
-      <div className="MainContainer">
+      <div className="MainContainer greyBackground">
         <PostInput addPost={props.addPost} currentUser={props.currentUser} />
         <br></br>
         <br></br>

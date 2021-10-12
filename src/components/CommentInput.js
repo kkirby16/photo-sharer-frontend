@@ -36,19 +36,21 @@ class CommentInput extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="commentForm">
           <input
-            placeholder="Add a comment"
+            placeholder="Add a comment..."
             name="text"
             onChange={this.handleChange}
             className="commentInput"
           />
-
-          <input
+          <button
             type="submit"
             value="Post comment"
-            className="textForComments"
-          />
+            className="textForComments postButtonLocation"
+          >
+            &nbsp; &nbsp;&nbsp;&nbsp;{" "}
+            <span className="postCommentLabel">Post</span>
+          </button>
         </form>
       </div>
     );

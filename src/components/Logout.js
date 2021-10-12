@@ -6,13 +6,21 @@ import React from "react";
 import { connect } from "react-redux";
 import { logout } from "../actions/currentUser.js";
 import "./myStyles.css";
+import { Icon } from "@iconify/react";
 
 //props get passed into a functional component as an argument and they will also come in as an object.
 const Logout = ({ logout }) => {
   return (
-    <form onSubmit={logout}>
-      <input className="logoutButton" type="submit" value="Log Out" />
-    </form>
+    // <form onSubmit={logout}>
+    //   <input className="logoutButton" type="submit" value="Log Out" />
+    // </form>
+    <Icon
+      icon="teenyicons:logout-solid"
+      width="25"
+      height="25"
+      onClick={logout}
+      className="logoutButton"
+    />
   );
 };
 
