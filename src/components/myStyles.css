@@ -21,7 +21,7 @@ button {
 
 .interact_word {
   font-family: "Recoleta Alt";
-  color: rgb(218, 185, 116);
+  color: #cfa666;
   /* color: rgb(202, 152, 69); */
 }
 
@@ -87,14 +87,17 @@ button {
 }
 
 .fitImage {
-  width: 42%;
-  height: auto;
+  max-width: 81.5%;
+  max-height: 81.5%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
 }
 
 .deleteButton {
   position: relative;
-  bottom: 16px;
-  left: 270px;
+  bottom: 74px;
+  left: 250px;
 }
 
 .deleteButton:hover {
@@ -112,6 +115,10 @@ button {
   margin-top: 12px;
 }
 
+.logoutButton:hover {
+  color: rgb(104, 104, 104);
+}
+
 .mainPageTitleText {
   font-family: "Nature Spirit";
   font-size: 33px;
@@ -125,11 +132,18 @@ button {
 .textForComments {
   font-family: "Neue Helvetica";
   font-weight: 500;
+  border: none;
+  background: none;
 }
 
 .textForPosts {
   font-family: "Neue Helvetica";
   font-weight: 500;
+  position: relative;
+  top: 100px;
+  left: 342px;
+  text-align: left;
+  /* word-wrap: normal; */
 }
 
 .textForWelcome {
@@ -142,7 +156,20 @@ button {
 
 .commentInput {
   font-family: "Neue Helvetica";
-  font-weight: 200;
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: 0.25px;
+  text-align: left;
+  border: none;
+  margin-left: -39%;
+}
+
+.commentInput:focus {
+  outline: none;
+}
+
+.commentInput::placeholder {
+  color: #868686;
 }
 
 .heavierWeightNeueHelvetica {
@@ -325,16 +352,147 @@ button {
 }
 
 .likeButton {
-  position: absolute;
-  left: 530px;
+  margin-right: 553px;
+  position: relative;
+  bottom: 24px;
 }
 
 .unlikeButton {
-  position: absolute;
-  left: 530px;
+  margin-right: 553px;
+  position: relative;
+  bottom: 24px;
 }
 
 .navbarHr {
   width: 100%;
+  margin-top: 20px;
   border-bottom: none;
+  margin-bottom: 0px;
+  background-color: #b3b3b3;
+}
+
+h2.greeting {
+  margin-top: 0px;
+}
+
+.Post_ul {
+  width: 60%;
+  border: 1px solid #d1d1d1;
+  border-radius: 1.5px;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 28px;
+  padding-left: 0px;
+  padding-top: 25px;
+  height: auto;
+  max-height: 1380px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.likesAmount {
+  font-weight: bold;
+  margin-left: -63%;
+  margin-top: -5.5%;
+}
+
+.greyBackground {
+  background-color: #f8f8f8;
+}
+
+.postCommentLabel {
+  color: rgb(62, 149, 239);
+  font-family: "Neue Helvetica";
+  font-size: 14.5px;
+  font-weight: 900;
+  letter-spacing: 0.25px;
+}
+
+.postButtonLocation {
+  position: relative;
+  right: 8px;
+}
+
+.uploadPhotoIcon {
+  position: relative;
+  top: 4px;
+}
+
+.captionIcon {
+  position: relative;
+  top: 8px;
+  right: 9px;
+}
+
+.inputForCaption {
+  border: 1px solid #aeaeae;
+  border-radius: 4.5px;
+  height: 20px;
+  font-size: 15px;
+  position: relative;
+  top: 0px;
+}
+
+.inputForCaption:focus {
+  outline: none;
+}
+
+.createPostButton {
+  height: 40px;
+  width: 146px;
+  color: rgb(62, 149, 239);
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid #cde4fa;
+  border-radius: 20px;
+  background: #f8f8f8;
+  background: -webkit-linear-gradient(
+    left,
+    rgb(80, 107, 215),
+    rgb(184, 84, 172)
+  );
+  background: -o-linear-gradient(right, rgb(62, 149, 239), rgb(184, 84, 172));
+  background: -moz-linear-gradient(right, rgb(62, 149, 239), rgb(184, 84, 172));
+  background: linear-gradient(to right, rgb(62, 149, 239), rgb(184, 84, 172));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 31px;
+  transition: all 0.35s ease;
+}
+
+.createPostButton:hover {
+  background: #e9e9e9;
+  border: 2px solid #eacde6;
+  background: -webkit-linear-gradient(
+    left,
+    rgb(80, 107, 215),
+    rgb(184, 84, 172)
+  );
+  background: -o-linear-gradient(right, rgb(184, 84, 172), rgb(232, 137, 85));
+  background: -moz-linear-gradient(right, rgb(184, 84, 172), rgb(232, 137, 85));
+  background: linear-gradient(to right, rgb(184, 84, 172), rgb(232, 137, 85));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.createPostIcon {
+  position: relative;
+  top: 3.5px;
+  left: -4px;
+  transition: all 0.12s ease;
+}
+
+.createPostButton:hover .createPostIcon {
+  position: relative;
+  color: rgb(232, 137, 85);
+  top: 3.5px;
+  left: -4px;
+}
+
+.commentsFont {
+  font-family: "Neue Helvetica";
+  font-weight: 500;
+  text-decoration: none;
+  color: #868686;
+  font-weight: bold;
 }
