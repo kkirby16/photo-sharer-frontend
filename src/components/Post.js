@@ -86,10 +86,6 @@ class Post extends Component {
               className="fitImage"
             ></img>
           )}{" "}
-          <br></br>
-          {this.handle_likes()}
-          <br></br>
-          <br></br>
           <li className="textForPosts">
             <strong className="usernameAndCaption">
               {this.props.post.user.username}:
@@ -98,11 +94,15 @@ class Post extends Component {
               {this.props.post.caption}{" "}
             </span>
           </li>
+          <br></br>
+          {this.handle_likes()}
+          <br></br>
+          <br></br>
           {this.can_delete_post() === true ? (
             <Icon
               icon="octicon:trash-24"
-              width="22"
-              height="22"
+              width="23"
+              height="23"
               className="deleteButton"
               type="button"
               onClick={() => {
@@ -112,20 +112,24 @@ class Post extends Component {
               {" "}
             </Icon>
           ) : null}
-          <p>Likes: {this.props.post.likes.length}</p>
+          <p className="likesAmount">
+            {this.props.post.likes.length == 1
+              ? this.props.post.likes.length + " like"
+              : this.props.post.likes.length + " likes"}{" "}
+          </p>
+          <br></br>
+          <br></br>
+          <br></br>
           <CommentInput post={this.props.post} />
           <br></br>
-          <u className="textForComments">Comments</u>
-          <br></br>
-          <br></br>
+          {this.props.post.comments.length !== 0 ? (
+            <u className="textForComments commentsFont">Comments</u>
+          ) : null}
           <Comments
             comments={this.props.post.comments}
             currentUser={this.props.currentUser}
             post={this.props.post}
           />
-          <br></br>
-          <br></br>
-          <br></br>
           <br></br>
         </ul>
       </div>
