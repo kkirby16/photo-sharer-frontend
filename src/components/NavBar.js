@@ -9,9 +9,9 @@ import Logout from "./Logout.js";
 import "./myStyles.css";
 
 const NavBar = ({ currentUser }) => {
-  return (
-    <div>
-      {currentUser ? (
+  if (currentUser) {
+    return (
+      <div>
         <li className="no_bullet_point_lis">
           <strong className="textForWelcome">
             &nbsp;&nbsp; Welcome, {currentUser.name}
@@ -21,12 +21,13 @@ const NavBar = ({ currentUser }) => {
             Photo Poster
           </span>
         </li>
-      ) : (
-        ""
-      )}
-      <hr className="navbarHr" />
-    </div>
-  );
+
+        {currentUser && <hr className="navbarHr" />}
+      </div>
+    );
+  } else {
+    return null;
+  }
 };
 
 const mapStateToProps = ({ currentUser }) => {
