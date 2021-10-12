@@ -20,7 +20,7 @@ const Home = ({}) => (
         See photos others have posted
       </li>
       <li className="no_bullet_point_lis home_page_text">
-        Comment on posts from others to{" "}
+        Comment on and like posts from others to{" "}
         <span className="interact_word">interact</span>{" "}
       </li>
       <br></br>
