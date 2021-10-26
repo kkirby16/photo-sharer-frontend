@@ -7,7 +7,6 @@ class PostInput extends Component {
   state = {
     image: "",
     caption: "",
-    //add likes?
   };
 
   handleChange = (event) => {
@@ -28,7 +27,6 @@ class PostInput extends Component {
     formData.append("caption", this.state.caption);
     // formData.append("likes", 0);
 
-    // configure your fetch url appropriately
     this.props.addPost(formData);
   };
 
@@ -47,7 +45,7 @@ class PostInput extends Component {
     return (
       <div>
         <br></br>
-        <p className="heavierWeightNeueHelvetica">Upload Post:</p>
+        <p className="heavierWeightNeueHelvetica">Upload Post</p>
         <form>
           <label htmlFor="photo">
             {" "}
@@ -63,6 +61,7 @@ class PostInput extends Component {
             type="file"
             name="image"
             accept="image/*"
+            class="customFileInput"
             onChange={this.handleImageChange}
           />
           <label htmlFor="caption">
