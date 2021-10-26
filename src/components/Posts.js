@@ -9,16 +9,14 @@ class Posts extends Component {
   renderPosts = () => {
     if (this.props.currentUser !== null && !this.props.posts.error) {
       return (
-        this.props.allPosts &&
-        this.props.allPosts.map((post) => {
+        //helper that returns post array. helper function would say do you have a filter or not. if has filter filter the array.
+        this.props.posts && //need to filter this information that is going into our map here that is going to be passed along to the post itself.
+        this.props.posts.map((post) => {
           return (
             <Post
               key={post.id}
               post={post}
               currentUser={this.props.currentUser}
-
-              // //   review={review}
-              // //   deleteReview={this.props.deleteReview}
             />
           );
         })
