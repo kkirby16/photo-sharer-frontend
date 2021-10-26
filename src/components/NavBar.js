@@ -18,7 +18,7 @@ const NavBar = ({ currentUser }) => {
           </strong>
           <span className="mainPageTitleText">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Photo Poster
+            Photo Sharer
           </span>
         </li>
 
