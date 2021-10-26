@@ -69,9 +69,6 @@ class Post extends Component {
   render() {
     console.log("VERY NEW", this.props.post);
     console.log("VERY NEW LOG", this.props.post.image_url);
-    // if (!this.props.post.image_url) {
-    // }
-
     // console.log("***NEWEST LOG", this.props.post.id);
     // console.log("OUR COMMENTS", this.props.post.comments);
     // const { image_url, caption, likes } = this.props.post;
