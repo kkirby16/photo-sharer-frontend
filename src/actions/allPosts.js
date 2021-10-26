@@ -41,7 +41,6 @@ export const setNewPost = (post) => {
 
 export const addPost = (post) => {
   return (dispatch) => {
-    //could dispatch before the fetch something like "loading/getting current user"
     return fetch("http://localhost:4500/api/v1/posts", {
       credentials: "include", //put credentials: "include" in every fetch.
       method: "POST",
@@ -49,7 +48,6 @@ export const addPost = (post) => {
         // "Content-Type": "application/json",
       },
       body: post,
-      //can dispatch as needed in this fetch.
     })
       .then((r) => r.json()) //we return json of a user if the user was successful.
       .then((response) => {
@@ -91,7 +89,7 @@ export const addComment = (text, postId) => {
       credentials: "include",
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(text),
+      body: JSON.stringify(text), //converts an object into json string
     })
       .then((res) => res.json())
       .then((response) =>
