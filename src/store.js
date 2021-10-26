@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
-import usersReducer from "./reducers/users.js"; //because default export we can choose to name it whatever we want.
+import usersReducer from "./reducers/users.js";
 import currentUser from "./reducers/currentUser.js";
 import allPosts from "./reducers/allPosts.js";
 import commentInput from "./reducers/commentInput";

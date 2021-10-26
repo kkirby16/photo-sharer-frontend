@@ -45,9 +45,9 @@ export default (state = { posts: [] }, action) => {
       return {
         ...state,
         posts: [
-          ...state.posts.slice(0, postIdx),
-          Object.assign({}, post), //this is putting the newly updated post into a new object to be super cler with redux that there is a change in state (change of the post/less comments) so re-render happens
-          ...state.posts.slice(postIdx + 1),
+          ...state.posts.slice(0, postIdx), //grabs from beginning of array to right before the post index.
+          Object.assign({}, post), //this is putting the newly updated post into a new object to be super clear with redux that there is a change in state (change of the post/less comments) so re-render happens
+          ...state.posts.slice(postIdx + 1), //this will start putting the rest of posts starting from right after the postIdx
         ],
       };
 
