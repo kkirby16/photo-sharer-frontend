@@ -21,9 +21,65 @@ button {
 
 .interact_word {
   font-family: "Recoleta Alt";
-  color: #cfa666;
-  /* color: rgb(202, 152, 69); */
+  color: rgb(202, 152, 69);
+
+  animation: changeColor 41s infinite;
 }
+
+@keyframes changeColor {
+  0% {
+    color: rgb(202, 152, 69);
+  }
+
+  10% {
+    color: rgb(202, 152, 69);
+  }
+
+  20% {
+    color: rgb(202, 152, 69);
+  }
+
+  30% {
+    color: #537da4;
+  }
+
+  40% {
+    color: #537da4;
+  }
+
+  50% {
+    color: #b44d36;
+  }
+
+  60% {
+    color: #b44d36;
+  }
+
+  70% {
+    color: #7da48e;
+  }
+
+  80% {
+    color: #7da48e;
+  }
+
+  100% {
+    color: rgb(202, 152, 69);
+  }
+}
+
+/* 0% {
+    color: rgb(200, 164, 96);
+  }
+
+  50% {
+    color: rgb(130, 158, 191);
+  }
+
+  100% {
+    color: rgb(121, 108, 56);
+  }
+} */
 
 .home_page_text {
   font-family: "Recoleta Alt";
@@ -68,20 +124,19 @@ button {
 }
 
 .backgroundImageForLogin {
-  background-image: url("https://petapixel.com/assets/uploads/2021/08/kevin-russ-iphone-landscape-photography-petapixel-11_1.jpg");
-  background-position: "center";
+  background-image: url("https://photos.smugmug.com/photos/i-5bGGXHq/0/X4/i-5bGGXHq-X4.jpg");
+  background-position: left 94%;
   background-repeat: "no-repeat";
-  background-size: "cover";
-  width: 100%;
+  background-size: 72.5%;
+  width: 139.5%;
   height: 100vh;
 }
 
 .backgroundImageForSignup {
   background-image: url("https://photos.smugmug.com/photos/i-9dK7PhM/0/X4/i-9dK7PhM-X4.jpg");
   background-position: "center";
-  background-repeat: "no-repeat";
-  background-size: "cover";
-  width: 100%;
+  background-size: 77%;
+  width: 132%;
   height: 100vh;
   margin: auto;
 }
@@ -98,6 +153,7 @@ button {
   position: relative;
   bottom: 74px;
   left: 250px;
+  cursor: pointer;
 }
 
 .deleteButton:hover {
@@ -113,6 +169,7 @@ button {
   float: right;
   margin-right: 20px;
   margin-top: 12px;
+  cursor: pointer;
 }
 
 .logoutButton:hover {
@@ -175,12 +232,14 @@ button {
 .heavierWeightNeueHelvetica {
   font-family: "Neue Helvetica";
   font-weight: 700;
+  font-size: 18px;
 }
 
 .deleteCommentButton {
   position: relative;
   bottom: 16px;
   left: 268px;
+  cursor: pointer;
 }
 
 .deleteCommentButton:hover {
@@ -355,20 +414,22 @@ button {
   margin-right: 553px;
   position: relative;
   bottom: 24px;
+  cursor: pointer;
 }
 
 .unlikeButton {
   margin-right: 553px;
   position: relative;
   bottom: 24px;
+  cursor: pointer;
 }
 
 .navbarHr {
   width: 100%;
   margin-top: 20px;
-  border-bottom: none;
   margin-bottom: 0px;
-  background-color: #b3b3b3;
+  border-top: none;
+  border-bottom: 1px solid #d1d1d1;
 }
 
 h2.greeting {
@@ -397,7 +458,7 @@ h2.greeting {
 }
 
 .greyBackground {
-  background-color: #f8f8f8;
+  background-color: #fafafa;
 }
 
 .postCommentLabel {
@@ -406,6 +467,7 @@ h2.greeting {
   font-size: 14.5px;
   font-weight: 900;
   letter-spacing: 0.25px;
+  cursor: pointer;
 }
 
 .postButtonLocation {
@@ -445,6 +507,7 @@ h2.greeting {
   font-size: 18px;
   border: 2px solid #cde4fa;
   border-radius: 20px;
+  cursor: pointer;
   background: #f8f8f8;
   background: -webkit-linear-gradient(
     left,
@@ -495,4 +558,41 @@ h2.greeting {
   text-decoration: none;
   color: #868686;
   font-weight: bold;
+}
+
+.searchByUsername {
+  position: absolute;
+  left: 43%;
+  top: 11px;
+  height: 23px;
+  width: 202px;
+  background-color: #fafafa;
+  text-align: center;
+  border: 1px solid #c5c5c5;
+  border-radius: 2.7px;
+}
+
+.searchByUsername::placeholder {
+  color: #6c6c6c;
+}
+
+.searchByUsername:focus {
+  outline: none;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 43.7%;
+  top: 2.3%;
+  z-index: 1;
+  color: #848484;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: lightgrey;
+  background: url("https://api.iconify.design/bi/upload.svg") no-repeat center
+    center / contain;
+}
+
+input[type="file"]::file-selector-button:hover {
 }
