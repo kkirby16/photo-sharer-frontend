@@ -21,7 +21,7 @@ export const clearCurrentUser = () => {
 export const login = (credentials, history) => {
   return (dispatch) => {
     //could dispatch before the fetch something like "loading/getting current user"
-    return fetch("http://localhost:4500/api/v1/login", {
+    return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/login", {
       credentials: "include", //put credentials: "include" in every fetch.
       method: "POST",
       headers: {
@@ -53,7 +53,7 @@ export const signup = (credentials, history) => {
       user: credentials, //this credentials should have all those top level keys under user.
     };
     //could dispatch before the fetch something like "loading/getting current user"
-    return fetch("http://localhost:4500/api/v1/signup", {
+    return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/signup", {
       credentials: "include", //put credentials: "include" in every fetch.
       method: "POST",
       headers: {
@@ -83,7 +83,7 @@ export const logout = () => {
   return (dispatch) => {
     dispatch(clearCurrentUser());
     dispatch(clearAllPosts());
-    return fetch("http://localhost:4500/api/v1/logout", {
+    return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/logout", {
       credentials: "include", //sends our cookies back.
       method: "DELETE",
     });
@@ -93,13 +93,16 @@ export const logout = () => {
 export const getCurrentUser = () => {
   console.log("DISPATCHING GET CURRENT USER");
   return (dispatch) => {
-    return fetch("http://localhost:4500/api/v1/get_current_user", {
-      credentials: "include", //say this for when you need to send an authenticated or authorized request of some sort.
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    return fetch(
+      "https://photo-sharer-backend.herokuapp.com/api/v1/get_current_user",
+      {
+        credentials: "include", //say this for when you need to send an authenticated or authorized request of some sort.
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((r) => r.json())
       .then((response) => {
         if (response.error) {

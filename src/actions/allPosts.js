@@ -10,7 +10,7 @@ export const setAllPosts = (posts) => {
 export const getAllPosts = () => {
   //or should this be called getAllPosts?
   return (dispatch) => {
-    return fetch("http://localhost:4500/api/v1/posts", {
+    return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
       credentials: "include",
       //say this for when you need to send an authenticated or authorized request of some sort.
       method: "GET",
@@ -41,7 +41,7 @@ export const setNewPost = (post) => {
 
 export const addPost = (post) => {
   return (dispatch) => {
-    return fetch("http://localhost:4500/api/v1/posts", {
+    return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
       credentials: "include", //put credentials: "include" in every fetch.
       method: "POST",
       headers: {
@@ -72,11 +72,14 @@ export const clearPost = (postId) => {
 export const removePost = (postId) => {
   console.log("LOG IN ACTION CREATOR", postId);
   return (dispatch) => {
-    return fetch(`http://localhost:4500/api/v1/posts/${postId}`, {
-      credentials: "include",
-      method: "DELETE",
-      headers: { "Content-Type": "application/json" },
-    }).then((res) => {
+    return fetch(
+      `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}`,
+      {
+        credentials: "include",
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      }
+    ).then((res) => {
       dispatch(clearPost(postId));
     });
   };
@@ -85,12 +88,15 @@ export const removePost = (postId) => {
 export const addComment = (text, postId) => {
   console.log("post id");
   return (dispatch) => {
-    return fetch(`http://localhost:4500/api/v1/posts/${postId}/comments`, {
-      credentials: "include",
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(text), //converts an object into json string
-    })
+    return fetch(
+      `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}/comments`,
+      {
+        credentials: "include",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(text), //converts an object into json string
+      }
+    )
       .then((res) => res.json())
       .then((response) =>
         dispatch({
@@ -112,7 +118,7 @@ export const clearComment = (postId, commentId) => {
 export const removeComment = (postId, commentId) => {
   return (dispatch) => {
     return fetch(
-      `http://localhost:4500/api/v1/posts/${postId}/comments/${commentId}`,
+      `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}/comments/${commentId}`,
       {
         credentials: "include",
         method: "DELETE",
@@ -126,12 +132,15 @@ export const removeComment = (postId, commentId) => {
 
 export const addLike = (user_id, post_id) => {
   return (dispatch) => {
-    return fetch(`http://localhost:4500/api/v1/posts/${post_id}/likes`, {
-      credentials: "include",
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user_id),
-    })
+    return fetch(
+      `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${post_id}/likes`,
+      {
+        credentials: "include",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(user_id),
+      }
+    )
       .then((res) => res.json())
       .then((response) =>
         dispatch({
@@ -154,7 +163,7 @@ export const clearLike = (user_id, post_id, users_like) => {
 export const deleteLike = (user_id, post_id, users_like) => {
   return (dispatch) => {
     return fetch(
-      `http://localhost:4500/api/v1/posts/${post_id}/likes/${users_like.id}`,
+      `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${post_id}/likes/${users_like.id}`,
       {
         credentials: "include",
         method: "DELETE",
