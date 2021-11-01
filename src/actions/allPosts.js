@@ -17,11 +17,7 @@ export const getAllPosts = () => {
       headers: {
         "Content-Type": "application/json",
       },
-    })
-      .then((r) => r.json())
-      .then((response) => {
-        dispatch(setAllPosts(response));
-      });
+    }).then((r) => console.log("What is this response?", r));
   };
 };
 
