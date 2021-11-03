@@ -16,6 +16,7 @@ export const getAllPosts = () => {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
       },
     })
       .then((r) => r.json())
@@ -46,6 +47,7 @@ export const addPost = (post) => {
       method: "POST",
       headers: {
         // "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
       },
       body: post,
     })
@@ -77,7 +79,10 @@ export const removePost = (postId) => {
       {
         credentials: "include",
         method: "DELETE",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
+        },
       }
     ).then((res) => {
       dispatch(clearPost(postId));
@@ -93,7 +98,10 @@ export const addComment = (text, postId) => {
       {
         credentials: "include",
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
+        },
         body: JSON.stringify(text), //converts an object into json string
       }
     )
@@ -122,7 +130,10 @@ export const removeComment = (postId, commentId) => {
       {
         credentials: "include",
         method: "DELETE",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
+        },
       }
     ).then((res) => {
       dispatch(clearComment(postId, commentId));
@@ -137,7 +148,10 @@ export const addLike = (user_id, post_id) => {
       {
         credentials: "include",
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
+        },
         body: JSON.stringify(user_id),
       }
     )
@@ -167,7 +181,10 @@ export const deleteLike = (user_id, post_id, users_like) => {
       {
         credentials: "include",
         method: "DELETE",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
+        },
       }
     ).then((res) => {
       dispatch(clearLike(user_id, post_id, users_like));

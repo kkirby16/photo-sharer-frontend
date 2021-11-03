@@ -26,6 +26,7 @@ export const login = (credentials, history) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
       },
       body: JSON.stringify(credentials),
       //can dispatch as needed in this fetch.
@@ -58,6 +59,7 @@ export const signup = (credentials, history) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
       },
       body: JSON.stringify(userInfo),
     })
@@ -86,6 +88,9 @@ export const logout = () => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/logout", {
       credentials: "include", //sends our cookies back.
       method: "DELETE",
+      headers: {
+        "Access-Control-Allow-Credentials": true,
+      },
     });
   };
 };
@@ -100,6 +105,7 @@ export const getCurrentUser = () => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Credentials": true,
         },
       }
     )
