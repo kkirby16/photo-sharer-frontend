@@ -22,7 +22,6 @@ export const login = (credentials, history) => {
   return (dispatch) => {
     //could dispatch before the fetch something like "loading/getting current user"
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/login", {
-      mode: "no-cors",
       credentials: "include", //put credentials: "include" in every fetch.
       method: "POST",
       headers: {
@@ -55,7 +54,6 @@ export const signup = (credentials, history) => {
     };
     //could dispatch before the fetch something like "loading/getting current user"
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/signup", {
-      mode: "no-cors",
       credentials: "include", //put credentials: "include" in every fetch.
       method: "POST",
       headers: {
@@ -86,7 +84,6 @@ export const logout = () => {
     dispatch(clearCurrentUser());
     dispatch(clearAllPosts());
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/logout", {
-      mode: "no-cors",
       credentials: "include", //sends our cookies back.
       method: "DELETE",
     });
@@ -99,7 +96,6 @@ export const getCurrentUser = () => {
     return fetch(
       "https://photo-sharer-backend.herokuapp.com/api/v1/get_current_user",
       {
-        mode: "no-cors",
         credentials: "include", //say this for when you need to send an authenticated or authorized request of some sort.
         method: "GET",
         headers: {

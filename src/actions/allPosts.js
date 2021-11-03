@@ -11,7 +11,6 @@ export const getAllPosts = () => {
   //or should this be called getAllPosts?
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
-      mode: "no-cors",
       credentials: "include",
       //say this for when you need to send an authenticated or authorized request of some sort.
       method: "GET",
@@ -43,7 +42,6 @@ export const setNewPost = (post) => {
 export const addPost = (post) => {
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
-      mode: "no-cors",
       credentials: "include", //put credentials: "include" in every fetch.
       method: "POST",
       headers: {
@@ -77,7 +75,6 @@ export const removePost = (postId) => {
     return fetch(
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}`,
       {
-        mode: "no-cors",
         credentials: "include",
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
@@ -94,7 +91,6 @@ export const addComment = (text, postId) => {
     return fetch(
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}/comments`,
       {
-        mode: "no-cors",
         credentials: "include",
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -124,7 +120,6 @@ export const removeComment = (postId, commentId) => {
     return fetch(
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}/comments/${commentId}`,
       {
-        mode: "no-cors",
         credentials: "include",
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
@@ -140,7 +135,6 @@ export const addLike = (user_id, post_id) => {
     return fetch(
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${post_id}/likes`,
       {
-        mode: "no-cors",
         credentials: "include",
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -171,7 +165,6 @@ export const deleteLike = (user_id, post_id, users_like) => {
     return fetch(
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${post_id}/likes/${users_like.id}`,
       {
-        mode: "no-cors",
         credentials: "include",
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
