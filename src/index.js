@@ -7,8 +7,6 @@ import { Provider } from "react-redux";
 import store from "./store.js";
 import { BrowserRouter as Router } from "react-router-dom";
 
-//doing these steps of creating a fake reducer for now to get redux standing up on its feet. edit: we took these steps out.
-
 ReactDOM.render(
   <Provider store={store}>
     <Router>
