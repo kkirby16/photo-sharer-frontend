@@ -5,11 +5,11 @@ import allPosts from "./reducers/allPosts.js";
 import commentInput from "./reducers/commentInput";
 import signupForm from "./reducers/signupForm.js";
 
-import thunk from "redux-thunk"; //i imported this without the curly braces to get it to work. is that okay?
+import thunk from "redux-thunk";
 import loginForm from "./reducers/loginForm.js";
 
 const reducer = combineReducers({
-  users: usersReducer, //shorthand syntax that is the same as saying "users: users". QUESTION: howard said this is a good way to fake having a reducer and after these steps he checked the redux state in redux devtools and it showed "users: []" but mine is showing undefined...?
+  users: usersReducer, //shorthand syntax that is the same as saying "users: users".
   currentUser,
   loginForm,
   allPosts,
