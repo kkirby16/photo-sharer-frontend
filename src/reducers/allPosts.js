@@ -88,7 +88,6 @@ export default (state = { posts: [] }, action) => {
       return { ...state, posts: posts };
 
     case "DELETE_LIKE":
-      console.log("deleted_like", action);
       let unlikedPost = state.posts.find((post) => post.id == action.post_id);
       console.log("UNLIKED POST", unlikedPost);
       let postIndex = state.posts.findIndex(
@@ -103,9 +102,9 @@ export default (state = { posts: [] }, action) => {
       return {
         ...state,
         posts: [
-          ...state.posts.slice(0, postIndex),
-          Object.assign({}, unlikedPost),
-          ...state.posts.slice(postIndex + 1),
+          ...state.posts.slice(0, postIndex), //grabs from beginning of array to right before the post index.
+          Object.assign({}, unlikedPost), //this is putting the newly updated post into a new object to be super clear with redux that there is a change in state (change of the post/less likes) so re-render happens
+          ...state.posts.slice(postIndex + 1), //this will start putting the rest of posts starting from right after the postIdx
         ],
       };
 
