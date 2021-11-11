@@ -1,18 +1,15 @@
-//gonna need a synchronous action
-
 export const setAllPosts = (posts) => {
   return {
     type: "SET_ALL_POSTS",
-    posts, //shorthand syntax (really user: user)
+    posts, //shorthand syntax
   };
 };
 
 export const getAllPosts = () => {
-  //or should this be called getAllPosts?
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
       credentials: "include",
-      //say this for when you need to send an authenticated or authorized request of some sort.
+      //say "credentials: include" for when you need to send an authenticated or authorized request of some sort.
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +26,6 @@ export const getAllPosts = () => {
 export const clearAllPosts = () => {
   return {
     type: "CLEAR_ALL_POSTS",
-    //shorthand syntax (really user: user)
   };
 };
 
@@ -43,7 +39,7 @@ export const setNewPost = (post) => {
 export const addPost = (post) => {
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
-      credentials: "include", //put credentials: "include" in every fetch.
+      credentials: "include",
       method: "POST",
       headers: {
         // "Content-Type": "application/json",
@@ -55,12 +51,12 @@ export const addPost = (post) => {
       .then((response) => {
         if (response.error) {
           alert(response.error); //could dipatch action saying found error.
-          //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller happened."
+          //if this response (user/response) has an error key that means that the error "Invalid Credentials in sessions controller" happened.
         } else {
           dispatch(setNewPost(response));
         }
       })
-      .catch(console.log); //if something goes wrong in the javascript end..
+      .catch(console.log); //if something goes wrong in the javascript end.
   };
 };
 
@@ -91,7 +87,6 @@ export const removePost = (postId) => {
 };
 
 export const addComment = (text, postId) => {
-  console.log("post id");
   return (dispatch) => {
     return fetch(
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}/comments`,
@@ -191,8 +186,6 @@ export const deleteLike = (user_id, post_id, users_like) => {
     });
   };
 };
-
-// /api/v1/posts/:post_id/comments
 
 //before you think about populating this piece of state with anything, you always want to get it into the store first so that you can see that the name and the data type are correct
 //build the reducer first, then add it to the store so you see it, and then build your action creator.
