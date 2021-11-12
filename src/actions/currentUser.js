@@ -96,7 +96,6 @@ export const logout = () => {
 };
 
 export const getCurrentUser = () => {
-  // console.log("DISPATCHING GET CURRENT USER");
   return (dispatch) => {
     return fetch(
       "https://photo-sharer-backend.herokuapp.com/api/v1/get_current_user",

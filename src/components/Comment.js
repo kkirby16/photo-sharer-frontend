@@ -15,9 +15,6 @@ class Comment extends Component {
   };
 
   render() {
-    console.log("WHAT IS POST ID?", this.props.post.id);
-    console.log("WHAT IS COMMENT HERE??", this.props.comment);
-
     return (
       <div className="wordWrap">
         <li
@@ -45,10 +42,6 @@ class Comment extends Component {
           </Icon>
         ) : null}
 
-        {/* <li>{this.props.comment.date}</li> */}
-        {/* <li style={{ listStyleType: "none" }}>
-          Posted by: {this.props.currentUser.attributes.username}
-        </li> */}
         <br></br>
       </div>
     );

@@ -20,9 +20,9 @@ class PostInput extends Component {
   };
 
   uploadPhoto = () => {
-    const formData = new FormData();
+    const formData = new FormData(); //creating new FormData object
 
-    formData.append("image", this.state.image);
+    formData.append("image", this.state.image); //adding key/value pairs to the FormData object
     formData.append("user_id", this.props.currentUser.id);
     formData.append("caption", this.state.caption);
     // formData.append("likes", 0);
@@ -32,7 +32,6 @@ class PostInput extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    //console.log(this.state.caption);
     this.uploadPhoto();
 
     this.setState({

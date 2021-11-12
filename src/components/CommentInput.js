@@ -19,8 +19,6 @@ class CommentInput extends Component {
     this.setState({
       comment: event.target.value,
     });
-    // const { text } = event.target;
-    // updateCommentInput(text);
   };
 
   handleSubmit = (event) => {
@@ -57,20 +55,4 @@ class CommentInput extends Component {
   }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     addComment: (comment) => dispatch(addComment(comment)),
-//   };
-// };
-
 export default connect(null, { addComment })(CommentInput);
-
-// //  create_table "comments", force: :cascade do |t|
-// t.integer "user_id"
-// t.integer "post_id"
-// t.string "text"
-// t.datetime "date"
-// t.integer "likes"
-// t.datetime "created_at", precision: 6, null: false
-// t.datetime "updated_at", precision: 6, null: false
-// end

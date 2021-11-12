@@ -100,7 +100,7 @@ export const addComment = (text, postId) => {
         body: JSON.stringify(text), //converts an object into json string
       }
     )
-      .then((res) => res.json())
+      .then((res) => res.json()) //res is a whole response which has headers, body and a lot of info and what we want is just the body of the response and that is why .json() exists... to just get that and convert to a javascript object that it is readable and nice to process.
       .then((response) =>
         dispatch({
           type: "ADD_COMMENT",
@@ -187,5 +187,5 @@ export const deleteLike = (user_id, post_id, users_like) => {
   };
 };
 
-//before you think about populating this piece of state with anything, you always want to get it into the store first so that you can see that the name and the data type are correct
+//before you think about populating a piece of state with anything, you always want to get it into the store first so that you can see that the name and the data type are correct
 //build the reducer first, then add it to the store so you see it, and then build your action creator.

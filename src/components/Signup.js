@@ -7,14 +7,12 @@ import { updateSignupForm } from "../actions/signupForm.js";
 import { Link } from "react-router-dom";
 import "./myStyles.css";
 
-// import { signup } from "../actions/currentUser.js";
-
 const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     const updatedFormInfo = {
       ...signupFormData, //the spreading here of the loginForm keeps the other property not currently being updated in place.
-      [name]: value, //why have the brackets around name?
+      [name]: value,
     };
     updateSignupForm(updatedFormInfo);
   };
@@ -67,7 +65,7 @@ const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
       </div>
     </div>
   );
-}; //history object and has a collection of all the links you've been to.
+}; //history object has a collection of all the links you've been to.
 
 const mapStateToProps = (state) => {
   return {
@@ -76,6 +74,6 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, { updateSignupForm, signup })(Signup);
-//shorthand syntax of simply passing an object, the key is whatever i want to call this object in my component, let's call it updateLoginForm, the value is whatever the value needs to be pointing to usually an action creator. and because key and value are the same, can just use { updateLoginForm }
+//shorthand syntax of simply passing an object, the key is whatever i want to call this object in my component, for example { updateSignupForm }, the value is whatever the value needs to be pointing to, usually an action creator. and because key and value are the same, can just use { updateSignupForm }
 //connect returns a function that takes a component and then returns a component.
-//the updateLoginForm action creator you import simply gets passed into connect.
+//the updateSignup Form and signup action creators you import simply get passed into connect.

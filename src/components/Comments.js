@@ -4,29 +4,17 @@ import Comment from "./Comment.js";
 import "./myStyles.css";
 
 class Comments extends Component {
-  //   componentDidUpdate(nextProps) {
-  // //     if (nextProps.comments !== this.props.comments) {
-  // //       this.props.comments = nextProps.comments;
-  // //     }
-  // //   }
-
   renderComments = () => {
     if (this.props.currentUser != null) {
-      console.log("what is this?", this.props.comments);
-
       return (
         this.props.comments &&
         this.props.comments.map((comment) => {
-          console.log("food is good", comment);
           return (
             <Comment
               key={comment.id}
               comment={comment}
               currentUser={this.props.currentUser}
               post={this.props.post}
-
-              // //   review={review}
-              // //   deleteReview={this.props.deleteReview}
             />
           );
         })

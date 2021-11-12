@@ -95,7 +95,6 @@ class App extends React.Component {
             )}
           />
         </Switch>
-        {/* <Route exact path="/" component={MainContainer} /> */}
       </div>
     );
 
@@ -104,10 +103,6 @@ class App extends React.Component {
     //withrouter gives app those props.
     //think about refactoring this to a navbar.
     //nav should have the welcome user and login/logout functionality.
-
-    // <MainContainer/>
-    // {/*main container might have a couple different components in it. */}
-    // <Footer/>
   }
 }
 
@@ -120,6 +115,7 @@ const mapStateToProps = (state) => {
 };
 
 export default withRouter(
+  //need withRouter to give app the router props
   connect(mapStateToProps, {
     getCurrentUser,
     getAllPosts,
@@ -127,11 +123,7 @@ export default withRouter(
   })(App)
 ); //we don't need state here but we need this action and we want it to happen everytime the component mounts
 
-//can also add some routes and might be better to think about sooner rather than later.
 //routing has to do with pointing to different components so we can build all the components at once, show them all on the screen, and then split up the components as I want
 //routing is not that tough to add in after things are built out.
 
-//logout maybe should be in the navbar once I am logged in.
-//do i need to wrap the connect with withRouter?
 //**the router props: history, match and location are going to be given to any children of a route automatically. */
-//need withRouter to give app the router props

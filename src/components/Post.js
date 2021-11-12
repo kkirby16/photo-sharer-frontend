@@ -20,16 +20,12 @@ class Post extends Component {
   };
 
   users_like = () => {
-    // if (this.props.currentUser.likes) {
     return this.props.post.likes.find(
       (like) => like.user_id === this.props.currentUser.id
     );
-    //
   };
 
   handle_likes = () => {
-    //if current doesn't have any likes associated with this post
-    // let post = this.props.currentUser
     if (
       !this.props.post.likes.some(
         (like) => like.user_id === this.props.currentUser.id
@@ -67,11 +63,8 @@ class Post extends Component {
   };
 
   render() {
-    console.log("VERY NEW", this.props.post);
-    console.log("VERY NEW LOG", this.props.post.image_url);
     // console.log("***NEWEST LOG", this.props.post.id);
     // console.log("OUR COMMENTS", this.props.post.comments);
-    // const { image_url, caption, likes } = this.props.post;
     return (
       <div>
         <ul className="Post_ul">

@@ -57,6 +57,3 @@ const Home = ({}) => (
 );
 
 export default Home;
-
-//navlinks are good or navbars where you are going to see those links kinda at all times.
-//these are just going to be links where i'm clicking on it, going somewhere, and not going to see it again... so link should be good for this.
