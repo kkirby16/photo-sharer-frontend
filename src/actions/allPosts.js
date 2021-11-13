@@ -18,7 +18,7 @@ export const getAllPosts = () => {
     })
       .then((r) => r.json())
       .then((response) => {
-        console.log(response);
+        console.log(response); //dispatch(setAllPosts(response));
       });
   };
 };
