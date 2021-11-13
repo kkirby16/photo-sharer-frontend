@@ -2,7 +2,6 @@ import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import usersReducer from "./reducers/users.js";
 import currentUser from "./reducers/currentUser.js";
 import allPosts from "./reducers/allPosts.js";
-import commentInput from "./reducers/commentInput";
 import signupForm from "./reducers/signupForm.js";
 
 import thunk from "redux-thunk";
@@ -13,7 +12,6 @@ const reducer = combineReducers({
   currentUser,
   loginForm,
   allPosts,
-  commentInput,
   signupForm,
 });
 
