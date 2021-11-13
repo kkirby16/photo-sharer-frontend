@@ -14,6 +14,8 @@ export const getAllPosts = () => {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Origin":
+          "https://photo-sharer-kkirby16.netlify.app",
       },
     })
       .then((r) => r.json())
@@ -44,6 +46,8 @@ export const addPost = (post) => {
       headers: {
         // "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Origin":
+          "https://photo-sharer-kkirby16.netlify.app",
       },
       body: post,
     })
@@ -78,6 +82,8 @@ export const removePost = (postId) => {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin":
+            "https://photo-sharer-kkirby16.netlify.app",
         },
       }
     ).then((res) => {
@@ -96,6 +102,8 @@ export const addComment = (text, postId) => {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin":
+            "https://photo-sharer-kkirby16.netlify.app",
         },
         body: JSON.stringify(text), //converts an object into json string
       }
@@ -128,6 +136,8 @@ export const removeComment = (postId, commentId) => {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin":
+            "https://photo-sharer-kkirby16.netlify.app",
         },
       }
     ).then((res) => {
@@ -146,6 +156,8 @@ export const addLike = (user_id, post_id) => {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin":
+            "https://photo-sharer-kkirby16.netlify.app",
         },
         body: JSON.stringify(user_id),
       }
@@ -179,6 +191,8 @@ export const deleteLike = (user_id, post_id, users_like) => {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin":
+            "https://photo-sharer-kkirby16.netlify.app",
         },
       }
     ).then((res) => {

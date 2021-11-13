@@ -28,6 +28,8 @@ export const login = (credentials, history) => {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Origin":
+          "https://photo-sharer-kkirby16.netlify.app",
       },
       body: JSON.stringify(credentials),
       //can dispatch as needed in this fetch.
@@ -61,6 +63,8 @@ export const signup = (credentials, history) => {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Origin":
+          "https://photo-sharer-kkirby16.netlify.app",
       },
       body: JSON.stringify(userInfo),
     })
@@ -90,6 +94,8 @@ export const logout = () => {
       method: "DELETE",
       headers: {
         "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Origin":
+          "https://photo-sharer-kkirby16.netlify.app",
       },
     });
   };
@@ -105,6 +111,8 @@ export const getCurrentUser = () => {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin":
+            "https://photo-sharer-kkirby16.netlify.app",
         },
       }
     )
