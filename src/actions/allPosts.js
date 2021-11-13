@@ -15,11 +15,8 @@ export const getAllPosts = () => {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
       },
-    })
-      .then((r) => r.json())
-      .then((response) => {
-        console.log(response); //dispatch(setAllPosts(response));
-      });
+    }).then((r) => console.log(r));
+    //dispatch(setAllPosts(response));
   };
 };
 
