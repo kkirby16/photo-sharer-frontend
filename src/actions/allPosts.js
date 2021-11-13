@@ -1,3 +1,5 @@
+import { getCurrentUser } from "./currentUser";
+
 export const setAllPosts = (posts) => {
   return {
     type: "SET_ALL_POSTS",
@@ -16,6 +18,7 @@ export const getAllPosts = () => {
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
           "https://photo-sharer-kkirby16.netlify.app",
+        "Access-Control-Allow-Methods": GET,
       },
     })
       .then((r) => r.json())
