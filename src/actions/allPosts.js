@@ -18,7 +18,6 @@ export const getAllPosts = () => {
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
           "https://photo-sharer-kkirby16.netlify.app",
-        "Access-Control-Allow-Methods": "GET",
       },
     })
       .then((r) => r.json())
