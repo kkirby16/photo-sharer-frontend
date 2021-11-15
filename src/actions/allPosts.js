@@ -20,11 +20,19 @@ export const getAllPosts = () => {
       },
     })
       .then((r) => r.json())
-      .then((response) => {
-        dispatch(setAllPosts(response));
-      });
+      .then((response) => dispatch(setAllPosts(response)));
   };
 };
+
+// .then((res) => res.json()) //res is a whole response which has headers, body and a lot of info and what we want is just the body of the response and that is why .json() exists... to just get that and convert to a javascript object that it is readable and nice to process.
+//       .then((response) =>
+//         dispatch({
+//           type: "ADD_COMMENT",
+//           payload: response,
+//         })
+//       );
+//   };
+// };
 
 export const clearAllPosts = () => {
   return {
