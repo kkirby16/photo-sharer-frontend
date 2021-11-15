@@ -20,7 +20,11 @@ export const getAllPosts = () => {
           "https://photo-sharer-kkirby16.netlify.app",
         "Access-Control-Allow-Methods": "GET",
       },
-    }).then((r) => console.log(r));
+    })
+      .then((r) => r.json())
+      .then((response) => {
+        dispatch(setAllPosts(response));
+      });
   };
 };
 
