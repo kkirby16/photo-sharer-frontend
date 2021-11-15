@@ -12,7 +12,6 @@ export const getAllPosts = () => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
       credentials: "include",
       //say "credentials: include" for when you need to send an authenticated or authorized request of some sort.
-      method: "GET",
       mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
