@@ -13,6 +13,7 @@ export const getAllPosts = () => {
       credentials: "include",
       //say "credentials: include" for when you need to send an authenticated or authorized request of some sort.
       method: "GET",
+      mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
@@ -45,6 +46,8 @@ export const addPost = (post) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
       credentials: "include",
       method: "POST",
+      mode: "no-cors",
+
       headers: {
         // "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
@@ -81,6 +84,8 @@ export const removePost = (postId) => {
       {
         credentials: "include",
         method: "DELETE",
+        mode: "no-cors",
+
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
@@ -101,6 +106,8 @@ export const addComment = (text, postId) => {
       {
         credentials: "include",
         method: "POST",
+        mode: "no-cors",
+
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
@@ -135,6 +142,8 @@ export const removeComment = (postId, commentId) => {
       {
         credentials: "include",
         method: "DELETE",
+        mode: "no-cors",
+
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
@@ -155,6 +164,8 @@ export const addLike = (user_id, post_id) => {
       {
         credentials: "include",
         method: "POST",
+        mode: "no-cors",
+
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
@@ -190,6 +201,8 @@ export const deleteLike = (user_id, post_id, users_like) => {
       {
         credentials: "include",
         method: "DELETE",
+        mode: "no-cors",
+
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,

@@ -25,6 +25,8 @@ export const login = (credentials, history) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/login", {
       credentials: "include", //put credentials: "include" in every fetch when you need to send an authenticated or authorized request of some sort.
       method: "POST",
+      mode: "no-cors",
+
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
@@ -60,6 +62,8 @@ export const signup = (credentials, history) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/signup", {
       credentials: "include",
       method: "POST",
+      mode: "no-cors",
+
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
@@ -92,6 +96,8 @@ export const logout = () => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/logout", {
       credentials: "include", //sends our cookies back.
       method: "DELETE",
+      mode: "no-cors",
+
       headers: {
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
@@ -108,6 +114,8 @@ export const getCurrentUser = () => {
       {
         credentials: "include", //say this for when you need to send an authenticated or authorized request of some sort.
         method: "GET",
+        mode: "no-cors",
+
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
