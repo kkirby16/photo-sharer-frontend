@@ -8,20 +8,23 @@ export const setAllPosts = (posts) => {
 };
 
 export const getAllPosts = () => {
-  return async (dispatch) => {
-    const headers = {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-      "Access-Control-Allow-Credentials": true,
-    };
-    const response = await fetch(
-      `https://photo-sharer-backend.herokuapp.com/api/v1/posts`,
-      {
-        headers: headers,
-      }
-    );
-    const data = await response.json();
-    dispatch(setAllPosts(data));
+  return (dispatch) => {
+    return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
+      credentials: "include",
+      withCredentials: true,
+      //say "credentials: include" for when you need to send an authenticated or authorized request of some sort.
+      mode: "no-cors",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Origin": "*",
+      },
+    })
+      .then((r) => r.json())
+      .then((response) => {
+        dispatch(setAllPosts(response));
+      });
   };
 };
 
@@ -46,7 +49,7 @@ export const addPost = (post) => {
       mode: "no-cors",
 
       headers: {
-        // "Content-Type": "application/json",
+        "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
           "https://photo-sharer-kkirby16.netlify.app",
