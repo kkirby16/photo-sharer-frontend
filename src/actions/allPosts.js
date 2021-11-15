@@ -8,22 +8,20 @@ export const setAllPosts = (posts) => {
 };
 
 export const getAllPosts = () => {
-  return (dispatch) => {
-    return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
-      credentials: "include",
-      //say "credentials: include" for when you need to send an authenticated or authorized request of some sort.
-      mode: "no-cors",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
-      },
-    })
-      .then((r) => r.json())
-      .then((response) => {
-        dispatch(setAllPosts(response));
-      });
+  return async (dispatch) => {
+    const headers = {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      "Access-Control-Allow-Credentials": true,
+    };
+    const response = await fetch(
+      `https://photo-sharer-backend.herokuapp.com/api/v1/posts`,
+      {
+        headers: headers,
+      }
+    );
+    const data = await response.json();
+    dispatch(setAllPosts(data));
   };
 };
 
