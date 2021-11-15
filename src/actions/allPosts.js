@@ -19,11 +19,11 @@ export const getAllPosts = () => {
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin": "*",
       },
-    })
-      .then((r) => r.json())
-      .then((response) => {
+    }).then((r) =>
+      r.json().then((response) => {
         dispatch(setAllPosts(response));
-      });
+      })
+    );
   };
 };
 
