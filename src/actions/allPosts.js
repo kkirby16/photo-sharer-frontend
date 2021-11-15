@@ -18,7 +18,8 @@ export const getAllPosts = () => {
         Accept: "application/json",
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin":
+          "https://photo-sharer-kkirby16.netlify.app",
       },
     })
       .then((r) => r.json())
