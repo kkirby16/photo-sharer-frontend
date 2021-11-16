@@ -24,9 +24,11 @@ export const login = (credentials, history) => {
     //could dispatch before the fetch something like "loading/getting current user"
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/login", {
       credentials: "include", //put credentials: "include" in every fetch when you need to send an authenticated or authorized request of some sort.
+      withCredentials: true,
       method: "POST",
 
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
@@ -60,9 +62,11 @@ export const signup = (credentials, history) => {
     //could dispatch before the fetch something like "loading/getting current user"
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/signup", {
       credentials: "include",
+      withCredentials: true,
       method: "POST",
 
       headers: {
+        Accept: "application/json",
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
@@ -93,9 +97,11 @@ export const logout = () => {
     dispatch(clearAllPosts());
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/logout", {
       credentials: "include", //sends our cookies back.
+      withCredentials: true,
       method: "DELETE",
 
       headers: {
+        Accept: "application/json",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
           "https://photo-sharer-kkirby16.netlify.app",
@@ -110,10 +116,12 @@ export const getCurrentUser = () => {
       "https://photo-sharer-backend.herokuapp.com/api/v1/get_current_user",
       {
         credentials: "include", //say this for when you need to send an authenticated or authorized request of some sort.
+        withCredentials: true,
         method: "GET",
-        mode: "no-cors",
+        mode: "cors",
 
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":

@@ -46,11 +46,13 @@ export const addPost = (post) => {
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
       credentials: "include",
+      withCredentials: true,
       method: "POST",
-      mode: "no-cors",
+      mode: "cors",
 
       headers: {
-        // "Content-Type": "application/json",
+        Accept: "application/json",
+        "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
           "https://photo-sharer-kkirby16.netlify.app",
@@ -84,10 +86,13 @@ export const removePost = (postId) => {
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}`,
       {
         credentials: "include",
+        withCredentials: true,
+
         method: "DELETE",
-        mode: "no-cors",
+        mode: "cors",
 
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":
@@ -106,10 +111,13 @@ export const addComment = (text, postId) => {
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}/comments`,
       {
         credentials: "include",
+        withCredentials: true,
+
         method: "POST",
-        mode: "no-cors",
+        mode: "cors",
 
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":
@@ -142,10 +150,12 @@ export const removeComment = (postId, commentId) => {
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}/comments/${commentId}`,
       {
         credentials: "include",
+        withCredentials: true,
         method: "DELETE",
-        mode: "no-cors",
+        mode: "cors",
 
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":
@@ -164,10 +174,12 @@ export const addLike = (user_id, post_id) => {
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${post_id}/likes`,
       {
         credentials: "include",
+        withCredentials: true,
         method: "POST",
-        mode: "no-cors",
+        mode: "cors",
 
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":
@@ -201,10 +213,12 @@ export const deleteLike = (user_id, post_id, users_like) => {
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${post_id}/likes/${users_like.id}`,
       {
         credentials: "include",
+        withCredentials: true,
         method: "DELETE",
-        mode: "no-cors",
+        mode: "cors",
 
         headers: {
+          Accept: "application/json",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":
