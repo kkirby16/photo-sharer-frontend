@@ -8,6 +8,7 @@ export const setAllPosts = (posts) => {
 };
 
 export const getAllPosts = () => {
+  console.log(`Bearer ${localStorage.getItem("token")}`);
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
       //credentials: "include",
