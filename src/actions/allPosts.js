@@ -27,7 +27,8 @@ export const getAllPosts = () => {
       .then((r) => r.json())
       .then((response) => {
         dispatch(setAllPosts(response));
-      });
+      })
+      .catch((error) => console.log(error.message));
   };
 };
 
