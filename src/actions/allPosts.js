@@ -45,14 +45,13 @@ export const setNewPost = (post) => {
 export const addPost = (post) => {
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
-      credentials: "include",
-      withCredentials: true,
+      // credentials: "include",
+      // withCredentials: true,
       method: "POST",
       mode: "cors",
 
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
           "https://photo-sharer-kkirby16.netlify.app",
