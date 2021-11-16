@@ -23,8 +23,8 @@ export const login = (credentials, history) => {
   return (dispatch) => {
     //could dispatch before the fetch something like "loading/getting current user"
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/login", {
-      credentials: "include", //put credentials: "include" in every fetch when you need to send an authenticated or authorized request of some sort.
-      withCredentials: true,
+      //credentials: "include", //put credentials: "include" in every fetch when you need to send an authenticated or authorized request of some sort.
+      //withCredentials: true,
       method: "POST",
 
       headers: {
@@ -42,7 +42,9 @@ export const login = (credentials, history) => {
         if (response.error) {
           alert(response.error);
         } else {
-          dispatch(setCurrentUser(response));
+          console.log("Response", response);
+          localStorage.setItem("token", response.token); //token
+          dispatch(setCurrentUser(response.user)); //user object response will have user key and token key.
           dispatch(resetLoginForm());
           dispatch(getAllPosts());
           history.push("/");
@@ -61,12 +63,11 @@ export const signup = (credentials, history) => {
     };
     //could dispatch before the fetch something like "loading/getting current user"
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/signup", {
-      credentials: "include",
-      withCredentials: true,
       method: "POST",
 
       headers: {
         Accept: "application/json",
+        Authorization: localStorage.getItem("token"),
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
@@ -79,7 +80,10 @@ export const signup = (credentials, history) => {
         if (response.error) {
           alert(response.error);
         } else {
-          dispatch(setCurrentUser(response));
+          console.log("Response", response);
+          localStorage.setItem("token", response.token); //token
+          dispatch(setCurrentUser(response.user)); //user object response will have user key and token key.
+
           dispatch(resetSignupForm());
           dispatch(getAllPosts());
           history.push("/"); //changes the url once successfully logged in
@@ -96,12 +100,11 @@ export const logout = () => {
     dispatch(clearCurrentUser()); //if user clicked log out, we should go ahead and log them out right away on the frontend.
     dispatch(clearAllPosts());
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/logout", {
-      credentials: "include", //sends our cookies back.
-      withCredentials: true,
       method: "DELETE",
 
       headers: {
         Accept: "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`, //this is so we know who the user is. we need to know you're a user here.
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
           "https://photo-sharer-kkirby16.netlify.app",
@@ -115,13 +118,14 @@ export const getCurrentUser = () => {
     return fetch(
       "https://photo-sharer-backend.herokuapp.com/api/v1/get_current_user",
       {
-        credentials: "include", //say this for when you need to send an authenticated or authorized request of some sort.
-        withCredentials: true,
+        //credentials: "include", //say this for when you need to send an authenticated or authorized request of some sort.
+        //withCredentials: true,
         method: "GET",
         mode: "cors",
 
         headers: {
           Accept: "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`, //this is so we know who the user is. we need to know you're a user here.
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":

@@ -10,12 +10,13 @@ export const setAllPosts = (posts) => {
 export const getAllPosts = () => {
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
-      credentials: "include",
-      withCredentials: true,
+      //credentials: "include",
+      //withCredentials: true,
       //say "credentials: include" for when you need to send an authenticated or authorized request of some sort.
       mode: "cors",
       headers: {
         Accept: "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
@@ -45,13 +46,14 @@ export const setNewPost = (post) => {
 export const addPost = (post) => {
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
-      credentials: "include",
-      withCredentials: true,
+      // credentials: "include",
+      // withCredentials: true,
       method: "POST",
       mode: "cors",
 
       headers: {
         Accept: "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
           "https://photo-sharer-kkirby16.netlify.app",
@@ -92,6 +94,7 @@ export const removePost = (postId) => {
 
         headers: {
           Accept: "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":
@@ -117,6 +120,7 @@ export const addComment = (text, postId) => {
 
         headers: {
           Accept: "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":
@@ -148,13 +152,12 @@ export const removeComment = (postId, commentId) => {
     return fetch(
       `https://photo-sharer-backend.herokuapp.com/api/v1/posts/${postId}/comments/${commentId}`,
       {
-        credentials: "include",
-        withCredentials: true,
         method: "DELETE",
         mode: "cors",
 
         headers: {
           Accept: "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":
@@ -179,6 +182,7 @@ export const addLike = (user_id, post_id) => {
 
         headers: {
           Accept: "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":
@@ -218,6 +222,7 @@ export const deleteLike = (user_id, post_id, users_like) => {
 
         headers: {
           Accept: "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Origin":
