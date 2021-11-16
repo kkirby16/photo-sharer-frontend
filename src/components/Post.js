@@ -71,7 +71,10 @@ class Post extends Component {
           {this.props.post.image_url ? (
             <img src={this.props.post.image_url} className="fitImage"></img>
           ) : (
-            ""
+            <img
+              src={this.props.post.seeded_image_data}
+              className="fitImage"
+            ></img>
           )}{" "}
           <li className="textForPosts">
             <strong className="usernameAndCaption">
