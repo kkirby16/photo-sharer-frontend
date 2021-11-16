@@ -28,7 +28,7 @@ export const getAllPosts = () => {
       .then((response) => {
         dispatch(setAllPosts(response));
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => console.log(error.message)); //catch message
   };
 };
 
