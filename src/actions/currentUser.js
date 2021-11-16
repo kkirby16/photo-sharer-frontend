@@ -100,17 +100,6 @@ export const logout = () => {
     dispatch(clearCurrentUser()); //if user clicked log out, we should go ahead and log them out right away on the frontend.
     dispatch(clearAllPosts());
     localStorage.clear();
-    return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/logout", {
-      method: "DELETE",
-
-      headers: {
-        Accept: "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`, //this is so we know who the user is. we need to know you're a user here.
-        "Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin":
-          "https://photo-sharer-kkirby16.netlify.app",
-      },
-    });
   };
 };
 
