@@ -21,11 +21,7 @@ export const getAllPosts = () => {
         "Access-Control-Allow-Origin":
           "https://photo-sharer-kkirby16.netlify.app",
       },
-    })
-      .then((r) => r.json())
-      .then((response) => {
-        dispatch(setAllPosts(response));
-      });
+    }).then((r) => console.log(r));
   };
 };
 
