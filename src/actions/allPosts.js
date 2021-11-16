@@ -13,7 +13,7 @@ export const getAllPosts = () => {
       credentials: "include",
       withCredentials: true,
       //say "credentials: include" for when you need to send an authenticated or authorized request of some sort.
-      mode: "no-cors",
+      mode: "cors",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
