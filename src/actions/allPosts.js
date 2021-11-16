@@ -45,8 +45,8 @@ export const setNewPost = (post) => {
 export const addPost = (post) => {
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
-      // credentials: "include",
-      // withCredentials: true,
+      credentials: "include",
+      withCredentials: true,
       method: "POST",
       mode: "cors",
 
