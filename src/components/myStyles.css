@@ -593,6 +593,4 @@ input[type="file"]::file-selector-button {
   padding: 8px 8px;
   border-radius: 3px;
   color: white;
-  background: url("https://api.iconify.design/bi/upload.svg") no-repeat center
-    center / contain;
 }
