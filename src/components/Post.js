@@ -49,7 +49,7 @@ class Post extends Component {
           width="30"
           height="30"
           className="unlikeButton"
-          color="#dc565a"
+          color="#ed4956"
           onClick={() =>
             this.props.deleteLike(
               this.props.currentUser.id,
