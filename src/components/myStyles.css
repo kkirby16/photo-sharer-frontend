@@ -594,6 +594,6 @@ input[type="file"]::file-selector-button {
   padding: 6px 7px;
   border-radius: 6px;
   color: white;
-  font-weight: 300;
+  font-weight: bold;
   cursor: pointer;
 }
