@@ -590,7 +590,7 @@ h2.greeting {
 
 input[type="file"]::file-selector-button {
   background-color: transparent;
-  width: 80px;
+  width: 120px;
   background: url("https://api.iconify.design/bi/upload.svg") no-repeat center
     center / contain;
 }
