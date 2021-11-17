@@ -595,4 +595,5 @@ input[type="file"]::file-selector-button {
   border-radius: 6px;
   color: white;
   font-weight: 300;
+  cursor: pointer;
 }
