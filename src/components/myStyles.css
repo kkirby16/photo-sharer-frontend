@@ -600,5 +600,7 @@ input[type="file"]::file-selector-button {
 
 .uploadPostSection {
   background: white;
+  width: 500px;
+  height: 500px;
   border-radius: 2px;
 }
