@@ -590,7 +590,7 @@ h2.greeting {
 
 input[type="file"]::file-selector-button {
   background: rgb(62, 149, 239);
-  border: none;
+  border: 0 none;
   padding: 7px 7px;
   border-radius: 5px;
   color: white;
