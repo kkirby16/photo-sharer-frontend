@@ -1,11 +1,7 @@
 //it is wise to build little tiny chunks/representations of our dom in their own components.
 
-//for login forms you can put state for the login into react or into redux.
-
 import React from "react";
 import { connect } from "react-redux";
-import Login from "./Login.js";
-import Logout from "./Logout.js";
 import "./myStyles.css";
 
 const NavBar = ({ currentUser }) => {
@@ -21,7 +17,6 @@ const NavBar = ({ currentUser }) => {
             Photo Sharer
           </span>
         </li>
-
         {currentUser && <hr className="navbarHr" />}
       </div>
     );

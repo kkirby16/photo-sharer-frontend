@@ -8,4 +8,4 @@ export default (state = [], action) => {
 
 //when @@INIT gets fired it is going to return the default state of all of your reducers.
 //default state should be an empty version of whatever this reducer is responsible for returning.
-//if have a proprety in your reducer that is returning undefined redux is like you don't need to know about that/there won't be state for that.
+//if have a property in your reducer that is returning undefined, redux is like you don't need to know about that/there won't be state for that.

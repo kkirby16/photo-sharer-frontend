@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Comments from "./Comments.js";
-import { addComment } from "../actions/allPosts.js";
 import { removePost } from "../actions/allPosts";
 import { addLike } from "../actions/allPosts";
 import { deleteLike } from "../actions/allPosts";
@@ -63,8 +62,6 @@ class Post extends Component {
   };
 
   render() {
-    // console.log("***NEWEST LOG", this.props.post.id);
-    // console.log("OUR COMMENTS", this.props.post.comments);
     return (
       <div>
         <ul className="Post_ul">

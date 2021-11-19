@@ -10,5 +10,3 @@ export default (state = null, action) => {
   }
 }; //since this is users reducer, it will return an array of users.
 //need a current user reducer so this app has a current user in our state.
-//wanting to be able to login and when the application loads, grab the current user.
-//we're starting with redux outside of the box. the actions and fetch request we'll make will come from redux rather than like inside of functions. putting everything in redux for now.

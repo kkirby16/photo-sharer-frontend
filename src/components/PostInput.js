@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { addPost } from "../actions/allPosts";
 import "./myStyles.css";
 import { Icon } from "@iconify/react";
 
@@ -21,19 +20,15 @@ class PostInput extends Component {
 
   uploadPhoto = () => {
     const formData = new FormData(); //creating new FormData object
-
     formData.append("image", this.state.image); //adding key/value pairs to the FormData object
     formData.append("user_id", this.props.currentUser.id);
     formData.append("caption", this.state.caption);
-    // formData.append("likes", 0);
-
     this.props.addPost(formData);
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
     this.uploadPhoto();
-
     this.setState({
       image: "",
       caption: "",

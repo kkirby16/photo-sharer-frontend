@@ -29,7 +29,6 @@ export default (state = { posts: [] }, action) => {
     case "CLEAR_COMMENT":
       let post = state.posts.find((post) => post.id == action.postId); //had to do a complicated delete like this because comment was nested under post
       let postIdx = state.posts.findIndex((post) => post.id == action.postId);
-
       let postComments = post.comments.filter(
         (comment) => comment.id !== action.commentId
       );
@@ -51,8 +50,6 @@ export default (state = { posts: [] }, action) => {
             ...post,
             likes: [...post.likes, action.payload],
           };
-          // console.log("UPDATED POST", updatedPost);
-
           return updatedPost;
         } else {
           return post;
@@ -65,7 +62,6 @@ export default (state = { posts: [] }, action) => {
       let postIndex = state.posts.findIndex(
         (post) => post.id == action.post_id
       );
-
       let postLikes = unlikedPost.likes.filter(
         (like) => like.id !== action.users_like.id
       );
