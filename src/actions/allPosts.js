@@ -11,9 +11,6 @@ export const getAllPosts = () => {
   console.log(`Bearer ${localStorage.getItem("token")}`);
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
-      //credentials: "include",
-      //withCredentials: true,
-      //say "credentials: include" for when you need to send an authenticated or authorized request of some sort.
       mode: "cors",
       headers: {
         Accept: "application/json",
@@ -28,7 +25,7 @@ export const getAllPosts = () => {
       .then((response) => {
         dispatch(setAllPosts(response));
       })
-      .catch((error) => console.log(error.message)); //catch message
+      .catch((error) => console.log(error.message));
   };
 };
 
@@ -50,7 +47,6 @@ export const addPost = (post) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
       method: "POST",
       mode: "cors",
-
       headers: {
         Accept: "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -88,10 +84,8 @@ export const removePost = (postId) => {
       {
         credentials: "include",
         withCredentials: true,
-
         method: "DELETE",
         mode: "cors",
-
         headers: {
           Accept: "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -114,10 +108,8 @@ export const addComment = (text, postId) => {
       {
         credentials: "include",
         withCredentials: true,
-
         method: "POST",
         mode: "cors",
-
         headers: {
           Accept: "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -129,7 +121,7 @@ export const addComment = (text, postId) => {
         body: JSON.stringify(text), //converts an object into json string
       }
     )
-      .then((res) => res.json()) //res is a whole response which has headers, body and a lot of info and what we want is just the body of the response and that is why .json() exists... to just get that and convert to a javascript object that it is readable and nice to process.
+      .then((res) => res.json()) //res is a whole response which has headers, body and a lot of info and what we want is just the body of the response and that is why .json() exists... to just get that and convert to a javascript object that is readable and nice to process.
       .then((response) =>
         dispatch({
           type: "ADD_COMMENT",
@@ -154,7 +146,6 @@ export const removeComment = (postId, commentId) => {
       {
         method: "DELETE",
         mode: "cors",
-
         headers: {
           Accept: "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -179,7 +170,6 @@ export const addLike = (user_id, post_id) => {
         withCredentials: true,
         method: "POST",
         mode: "cors",
-
         headers: {
           Accept: "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -219,7 +209,6 @@ export const deleteLike = (user_id, post_id, users_like) => {
         withCredentials: true,
         method: "DELETE",
         mode: "cors",
-
         headers: {
           Accept: "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -235,5 +224,4 @@ export const deleteLike = (user_id, post_id, users_like) => {
   };
 };
 
-//before you think about populating a piece of state with anything, you always want to get it into the store first so that you can see that the name and the data type are correct
 //build the reducer first, then add it to the store so you see it, and then build your action creator.

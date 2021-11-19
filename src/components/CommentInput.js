@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { addComment } from "../actions/allPosts.js";
 import { connect } from "react-redux";
 import "./myStyles.css";
-import { Icon } from "@iconify/react";
 
 //have own state not redux state.
 

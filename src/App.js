@@ -23,10 +23,8 @@ import "./components/myStyles.css";
 
 class App extends React.Component {
   //using a class for this because we want our lifecycle method.
-
   constructor(props) {
     super(props);
-
     this.state = {
       filteredSearch: "",
     };
@@ -97,12 +95,9 @@ class App extends React.Component {
         </Switch>
       </div>
     );
-
     //we would render in a route if we need some logic in it or if we want to pass particular props that won't be automatically supplied.
     //render allows us to be more specific with my props like pass more or less props along to these rendered components I can use render to be more explicit with what I'm doing.
     //withrouter gives app those props.
-    //think about refactoring this to a navbar.
-    //nav should have the welcome user and login/logout functionality.
   }
 }
 
@@ -121,9 +116,7 @@ export default withRouter(
     getAllPosts,
     addPost,
   })(App)
-); //we don't need state here but we need this action and we want it to happen everytime the component mounts
+);
 
-//routing has to do with pointing to different components so we can build all the components at once, show them all on the screen, and then split up the components as I want
 //routing is not that tough to add in after things are built out.
-
-//**the router props: history, match and location are going to be given to any children of a route automatically. */
+//the router props of history, match and location are going to be given to any children of a route automatically.

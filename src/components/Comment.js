@@ -41,7 +41,6 @@ class Comment extends Component {
             {" "}
           </Icon>
         ) : null}
-
         <br></br>
       </div>
     );

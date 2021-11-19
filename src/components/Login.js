@@ -66,6 +66,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, { updateLoginForm, login })(Login);
-//shorthand syntax of simply passing an object, the key is whatever i want to call this object in my component, let's call it updateLoginForm, the value is whatever the value needs to be pointing to, usually an action creator. and because key and value are the same, can just use { updateLoginForm }
-//connect returns a function that takes a component and then returns a component.
+//updateLoginForm and login are shorthand syntax of simply passing an object, the key is whatever i want to call this object in my component, for example updateLoginForm, the value is whatever the value needs to be pointing to, usually an action creator. because key and value are the same, can just use { updateLoginForm }
 //the updateLoginForm action creator you import simply gets passed into connect.
