@@ -8,6 +8,8 @@ I've always liked Instagram and posting my own photography there. So, for my fin
 
 ###
 
+## Overview of functionality
+
 This app has signup, login and logout functionality. It allows users to see posts that other users have uploaded, like posts, comment on posts, and search posts by username.
 
 It also allows you to share your own posts that contain an uploaded image and a caption, as well as delete your posts if you'd like. Additionally, you can unlike posts you've liked and delete comments you've made on posts.
