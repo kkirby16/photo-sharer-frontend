@@ -2,7 +2,7 @@
 
 I built a photo sharing app which has some similarities to Instagram. This app has a rails backend and a React/Redux/Thunk frontend. It also uses Active Storage for image upload ability.
 
-I've always liked Instagram and posting my own photography there. So, for my final project I decided to make an app that's similar to Instagram in ways.<br><br>
+I've always liked Instagram and posting my own photography there. So, for my final project I decided to make an app that's similar to Instagram in ways.<br><br><br>
 
 ###
 
