@@ -17,11 +17,17 @@ I've also added custom CSS to style my frontend.
 ## Built with:
 
 -React
+
 -React Router and RESTful Routing
+
 -Redux
+
 -Ruby on Rails API
+
 -Redux-thunk middleware
+
 -Active Storage for image upload
+
 -Custom CSS
 
 ## To install and run:
