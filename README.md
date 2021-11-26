@@ -8,7 +8,7 @@ I've always liked Instagram and posting my own photography there. So, for my fin
 
 ###
 
-## Overview of functionality
+## Overview of functionality:
 
 This app has signup, login and logout functionality. It allows users to see posts that other users have uploaded, like posts, comment on posts, and search posts by username.
 
