@@ -37,8 +37,7 @@ export const login = (credentials, history) => {
         if (response.error) {
           alert(response.error);
         } else {
-          console.log("Response", response);
-          localStorage.setItem("token", response.token); //token
+          localStorage.setItem("token", response.token); //returning token to user & putting token in token key of localstorage
           dispatch(setCurrentUser(response.user)); //user object response will have user key and token key.
           dispatch(resetLoginForm());
           dispatch(getAllPosts());

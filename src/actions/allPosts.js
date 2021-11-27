@@ -8,13 +8,12 @@ export const setAllPosts = (posts) => {
 };
 
 export const getAllPosts = () => {
-  console.log(`Bearer ${localStorage.getItem("token")}`);
   return (dispatch) => {
     return fetch("https://photo-sharer-backend.herokuapp.com/api/v1/posts", {
       mode: "cors",
       headers: {
         Accept: "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`, //this is so we know who the user is. server will verify that the signature is correct and then send the response to the client.
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
