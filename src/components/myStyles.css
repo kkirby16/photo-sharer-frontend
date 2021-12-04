@@ -598,9 +598,9 @@ input[type="file"]::file-selector-button {
   cursor: pointer;
 }
 
-.uploadPostSection {
+/* .uploadPostSection {
   background: white;
   width: 300px;
   height: 100px;
   border-radius: 2px;
-}
+} */
