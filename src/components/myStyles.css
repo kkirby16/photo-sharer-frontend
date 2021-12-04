@@ -13,10 +13,10 @@ button {
 
 .or_text {
   font-family: "Recoleta Alt";
-  font-size: 20px;
+  font-size: 1.389vw;
   color: white;
   position: relative;
-  top: -20px;
+  top: -2.5348542458809vh;
 }
 
 .interact_word {
@@ -68,44 +68,31 @@ button {
   }
 }
 
-/* 0% {
-    color: rgb(200, 164, 96);
-  }
-
-  50% {
-    color: rgb(130, 158, 191);
-  }
-
-  100% {
-    color: rgb(121, 108, 56);
-  }
-} */
-
 .home_page_text {
   font-family: "Recoleta Alt";
-  font-size: 23px;
+  font-size: 1.597vw;
   color: white;
 }
 
 .home_page_title_text {
   font-family: "Nature Spirit";
-  font-size: 123px;
+  font-size: 8.542vw;
   color: white;
   font-weight: 900;
   position: relative;
-  top: 26px;
+  top: 3.2953105196451vh;
 }
 
 .homepage_signup_login_text {
   font-family: "Recoleta Alt";
-  font-size: 50px;
+  font-size: 3.472vw;
   text-decoration: none;
   display: inline-block;
 }
 
 .image_size {
   width: 100%;
-  height: 550px;
+  height: 38.194vw;
   object-fit: cover;
   object-position: 50% 50%;
 }
@@ -151,8 +138,8 @@ button {
 
 .deleteButton {
   position: relative;
-  bottom: 74px;
-  left: 250px;
+  bottom: 5.139vw;
+  left: 17.361vw;
   cursor: pointer;
 }
 
@@ -162,13 +149,13 @@ button {
 
 .usernameAndCaption {
   position: relative;
-  right: 210px;
+  right: 14.583vw;
 }
 
 .logoutButton {
   float: right;
-  margin-right: 20px;
-  margin-top: 12px;
+  margin-right: 1.389vw;
+  margin-top: 0.833vw;
   cursor: pointer;
 }
 
@@ -178,12 +165,12 @@ button {
 
 .mainPageTitleText {
   font-family: "Nature Spirit";
-  font-size: 33px;
+  font-size: 2.292vw;
   color: black;
   font-weight: 300;
   position: relative;
-  top: 10px;
-  right: 485px;
+  top: 1.2674271229404vh;
+  right: 33.681vw;
 }
 
 .textForComments {
@@ -197,15 +184,15 @@ button {
   font-family: "Neue Helvetica";
   font-weight: 500;
   position: relative;
-  top: 100px;
-  left: 342px;
+  top: 12.674271229404vh;
+  left: 23.75vw;
   text-align: left;
   /* word-wrap: normal; */
 }
 
 .textForWelcome {
   font-family: "Neue Helvetica";
-  font-size: 18px;
+  font-size: 1.25vw;
   font-weight: 500;
   float: left;
   margin-top: 1%;
@@ -213,9 +200,9 @@ button {
 
 .commentInput {
   font-family: "Neue Helvetica";
-  font-size: 14.5px;
+  font-size: 1.007vw;
   font-weight: 800;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.017vw;
   text-align: left;
   border: none;
   margin-left: -39%;
@@ -232,7 +219,7 @@ button {
 .heavierWeightNeueHelvetica {
   font-family: "Neue Helvetica";
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.25vw;
 }
 
 .deleteCommentButton {
