@@ -37,7 +37,7 @@ class PostInput extends Component {
 
   render() {
     return (
-      <div className="uploadPostSection">
+      <div>
         <br></br>
         <p className="heavierWeightNeueHelvetica">Upload Post</p>
         <form>
