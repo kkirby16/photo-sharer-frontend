@@ -109,14 +109,16 @@ class Post extends Component {
           <br></br>
           <CommentInput post={this.props.post} />
           <br></br>
-          {this.props.post.comments.length !== 0 ? (
-            <u className="textForComments commentsFont">Comments</u>
-          ) : null}
-          <Comments
-            comments={this.props.post.comments}
-            currentUser={this.props.currentUser}
-            post={this.props.post}
-          />
+          <div className="commentsContainer">
+            {this.props.post.comments.length !== 0 ? (
+              <u className="textForComments commentsFont">Comments</u>
+            ) : null}
+            <Comments
+              comments={this.props.post.comments}
+              currentUser={this.props.currentUser}
+              post={this.props.post}
+            />
+          </div>
           <br></br>
         </ul>
       </div>
