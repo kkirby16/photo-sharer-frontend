@@ -73,6 +73,7 @@ class Post extends Component {
               className="fitImage"
             ></img>
           )}{" "}
+          {this.handle_likes()}
           <p className="likesAmount">
             {this.props.post.likes.length == 1
               ? this.props.post.likes.length + " like"
@@ -87,7 +88,6 @@ class Post extends Component {
             </span>
           </li>
           <br></br>
-          {this.handle_likes()}
           <br></br>
           <br></br>
           {this.can_delete_post() === true ? (
