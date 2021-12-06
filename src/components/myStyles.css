@@ -1,3 +1,6 @@
+@media only screen and (max-width: 1265px) {
+}
+
 h1,
 h3,
 h4,
@@ -139,7 +142,7 @@ button {
 .deleteButton {
   position: relative;
   bottom: 5.139vw;
-  left: 17.361vw;
+  left: 31%;
   cursor: pointer;
 }
 
@@ -398,7 +401,7 @@ button {
 }
 
 .likeButton {
-  margin-right: 553px;
+  margin-right: 63.5%;
   position: relative;
   bottom: 24px;
   cursor: pointer;
