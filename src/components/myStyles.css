@@ -5,6 +5,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Recoleta Alt";
+  src: url("../fonts/recoletaalt-medium-webfont.woff");
+  /*public/assets/fonts/helvetica_neue_lt_45_light-webfont.woff*/
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nature Spirit";
+  src: url("../fonts/naturespiritrough-webfont.woff");
+  /*public/assets/fonts/helvetica_neue_lt_45_light-webfont.woff*/
+  font-style: normal;
+}
+
 @media only screen and (max-width: 1265px) {
 }
 
