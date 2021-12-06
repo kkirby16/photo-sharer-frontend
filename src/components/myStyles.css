@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Neue Helvetica";
+  src: url("fonts/Helvetica Neue LT 45 Light (1).ttf");
+}
+
 @media only screen and (max-width: 1265px) {
 }
 
