@@ -73,6 +73,11 @@ class Post extends Component {
               className="fitImage"
             ></img>
           )}{" "}
+          <p className="likesAmount">
+            {this.props.post.likes.length == 1
+              ? this.props.post.likes.length + " like"
+              : this.props.post.likes.length + " likes"}{" "}
+          </p>
           <li className="textForPosts">
             <strong className="usernameAndCaption">
               {this.props.post.user.username}:
@@ -99,11 +104,6 @@ class Post extends Component {
               {" "}
             </Icon>
           ) : null}
-          <p className="likesAmount">
-            {this.props.post.likes.length == 1
-              ? this.props.post.likes.length + " like"
-              : this.props.post.likes.length + " likes"}{" "}
-          </p>
           <br></br>
           <br></br>
           <br></br>
