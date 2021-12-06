@@ -409,9 +409,9 @@ button {
 }
 
 .unlikeButton {
-  margin-right: 553px;
+  margin-right: 63.5%;
   position: relative;
-  bottom: 24px;
+  top: 14px;
   cursor: pointer;
 }
 
@@ -592,6 +592,11 @@ input[type="file"]::file-selector-button {
 .commentForm {
   position: relative;
   top: 3.5vh;
+  left: 44%;
+}
+
+.commentsContainer {
+  top: 1vh;
   left: 44%;
 }
 
