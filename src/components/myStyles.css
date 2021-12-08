@@ -24,13 +24,24 @@
     font-size: 5.7vw;
   }
 
-  .post_ul {
+  .Post_ul {
     width: 92%;
   }
 
   .fitImage {
     max-width: 95%;
     max-height: 95%;
+  }
+
+  .searchByUsername {
+    left: 42.5%;
+    top: 11px;
+    height: 21.5px;
+    width: 139px;
+  }
+
+  input.searchByUsername {
+    padding-left: 11px;
   }
 }
 
