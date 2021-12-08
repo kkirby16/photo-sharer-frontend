@@ -63,7 +63,7 @@ class Post extends Component {
 
   render() {
     return (
-      <div>
+      <div className="post">
         <ul className="Post_ul">
           {this.props.post.image_url ? (
             <img src={this.props.post.image_url} className="fitImage"></img>
