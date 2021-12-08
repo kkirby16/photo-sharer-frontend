@@ -19,35 +19,6 @@
   font-style: normal;
 }
 
-@media only screen and (min-device-width: 480px) {
-  .or_text {
-    font-size: 5.7vw;
-  }
-
-  .Post_ul {
-    width: 92%;
-  }
-
-  .fitImage {
-    max-width: 95%;
-    max-height: 95%;
-  }
-
-  .searchByUsername {
-    left: 42.5%;
-    top: 11px;
-    height: 21.5px;
-    width: 139px;
-  }
-
-  input.searchByUsername {
-    padding-left: 11px;
-  }
-}
-
-@media only screen and (max-width: 1265px) {
-}
-
 h1,
 h3,
 h4,
@@ -646,6 +617,35 @@ input[type="file"]::file-selector-button {
   position: relative;
   top: -4.9vh;
   left: 2.7%;
+}
+
+@media only screen and (min-device-width: 480px) {
+  .or_text {
+    font-size: 5.7vw;
+  }
+
+  .Post_ul {
+    width: 92%;
+  }
+
+  .fitImage {
+    max-width: 95%;
+    max-height: 95%;
+  }
+
+  .searchByUsername {
+    left: 42.5%;
+    top: 11px;
+    height: 21.5px;
+    width: 139px;
+  }
+
+  input.searchByUsername {
+    padding-left: 11px;
+  }
+}
+
+@media only screen and (max-width: 1265px) {
 }
 
 /* .uploadPostSection {
