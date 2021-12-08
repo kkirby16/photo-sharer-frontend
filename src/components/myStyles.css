@@ -19,6 +19,12 @@
   font-style: normal;
 }
 
+@media only screen and (min-device-width: 480px) {
+  .or_text {
+    font-size: 4.6vw;
+  }
+}
+
 @media only screen and (max-width: 1265px) {
 }
 
@@ -94,13 +100,13 @@ button {
 
 .home_page_text {
   font-family: "Recoleta Alt";
-  font-size: 1.597vw;
+  font-size: clamp(1.06rem, 1.597vw, 1.85vw);
   color: white;
 }
 
 .home_page_title_text {
   font-family: "Nature Spirit";
-  font-size: 8.542vw;
+  font-size: clamp(4.5rem, 8.542vw, 8.8vw);
   color: white;
   font-weight: 900;
   position: relative;
@@ -476,7 +482,7 @@ h2.greeting {
 .postCommentLabel {
   color: #0095f6;
   font-family: "Neue Helvetica";
-  font-size: clamp(1.1rem, 14.5px, 17px);
+  font-size: clamp(1.05rem, 0.8vw, 1.1vw);
   font-weight: 900;
   letter-spacing: 0.25px;
   cursor: pointer;
