@@ -664,6 +664,22 @@ input[type="file"]::file-selector-button {
   .deleteButton {
     bottom: 16.2vh;
   }
+
+  .likesAmount {
+    font-size: 17px;
+  }
+
+  .commentsContainer {
+    top: -7.3vh;
+  }
+
+  .searchIcon {
+    display: none;
+  }
+
+  .mainPageTitleText {
+    right: 29.681vw;
+  }
 }
 
 @media only screen and (max-width: 1265px) {
