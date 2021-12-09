@@ -314,8 +314,8 @@ button {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 23.611vw;
-  height: 32.953105196451vh;
+  width: 340px;
+  height: 260px;
   padding: 80px 40px;
   /* background: rgba(74, 74, 75, 0.493); */
   background: rgba(0, 0, 0, 0.35);
