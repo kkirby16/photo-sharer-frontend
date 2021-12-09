@@ -694,13 +694,23 @@ input[type="file"]::file-selector-button {
 
 @media only screen and (min-width: 500) and (max-width: 826) {
   .backgroundImageForLogin {
-    background-size: 211.5%;
+    background-image: url("https://photos.smugmug.com/photos/i-5bGGXHq/0/X4/i-5bGGXHq-X4.jpg");
+    background-position: left 94%;
+    background-repeat: "no-repeat";
+    background-size: 98.5%;
+    width: 215%;
+    height: 100vh;
   }
 }
 
 @media only screen and (min-width: 826) and (max-width: 1048) {
   .backgroundImageForLogin {
+    background-image: url("https://photos.smugmug.com/photos/i-5bGGXHq/0/X4/i-5bGGXHq-X4.jpg");
+    background-position: left 94%;
+    background-repeat: "no-repeat";
     background-size: 92%;
+    width: 139.5%;
+    height: 100vh;
   }
 }
 
