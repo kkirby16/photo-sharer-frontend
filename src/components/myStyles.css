@@ -625,7 +625,9 @@ input[type="file"]::file-selector-button {
   }
 
   .Post_ul {
-    width: 98%;
+    position: relative;
+    width: 105%;
+    right: 8.8%;
     text-align: center;
   }
 
@@ -645,10 +647,22 @@ input[type="file"]::file-selector-button {
     padding-left: 11px;
   }
 
+  .usernameAndCaption {
+    right: 27.583vw;
+  }
+
+  .commentForm {
+    left: 19%;
+  }
+
   .post {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .deleteButton {
+    bottom: 16.2vh;
   }
 }
 
