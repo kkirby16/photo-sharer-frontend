@@ -217,7 +217,7 @@ button {
   font-size: clamp(0.87rem, 1.25vw, 1.5vw);
   font-weight: 500;
   float: left;
-  margin-top: 3.2%;
+  margin-top: 1%;
 }
 
 .commentInput {
@@ -681,8 +681,25 @@ input[type="file"]::file-selector-button {
   .mainPageTitleText {
     right: 29.681vw;
   }
+
+  .textForWelcome {
+    margin-top: 3.2%;
+  }
 }
 
+@media only screen and (max-width: 1195) {
+  .usernameAndCaption {
+    right: 14.883vw;
+  }
+
+  .deleteButton {
+    bottom: 20.7vh;
+  }
+
+  .wordWrap {
+    left: 2px;
+  }
+}
 @media only screen and (max-width: 1265px) {
 }
 
