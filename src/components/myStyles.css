@@ -44,7 +44,7 @@ button {
   font-family: "Recoleta Alt";
   color: rgb(202, 152, 69);
 
-  animation: changeColor 41s infinite;
+  animation: changeColor 40s infinite;
 }
 
 @keyframes changeColor {
@@ -314,8 +314,8 @@ button {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 340px;
-  height: 260px;
+  width: 23.611vw;
+  height: 32.953105196451vh;
   padding: 80px 40px;
   /* background: rgba(74, 74, 75, 0.493); */
   background: rgba(0, 0, 0, 0.35);
@@ -684,6 +684,23 @@ input[type="file"]::file-selector-button {
 
   .textForWelcome {
     margin-top: 3.2%;
+  }
+}
+@media only screen and (min-width: 500) and (max-width: 1299) {
+  .or_text {
+    font-size: 4.1vw;
+  }
+}
+
+@media only screen and (min-width: 500) and (max-width: 826) {
+  .backgroundImageForLogin {
+    background-size: 211.5%;
+  }
+}
+
+@media only screen and (min-width: 826) and (max-width: 1048) {
+  .backgroundImageForLogin {
+    background-size: 92%;
   }
 }
 
