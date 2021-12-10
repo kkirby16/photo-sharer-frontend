@@ -75,6 +75,20 @@ class Post extends Component {
           )}{" "}
           <div className="postInfo">
             {this.handle_likes()}
+            {this.can_delete_post() === true ? (
+              <Icon
+                icon="octicon:trash-24"
+                width="23"
+                height="23"
+                className="deleteButton"
+                type="button"
+                onClick={() => {
+                  this.props.removePost(this.props.post.id);
+                }}
+              >
+                {" "}
+              </Icon>
+            ) : null}
             <li className="likesAmount">
               {this.props.post.likes.length == 1
                 ? this.props.post.likes.length + " like"
@@ -92,20 +106,6 @@ class Post extends Component {
           <br></br>
           <br></br>
           <br></br>
-          {this.can_delete_post() === true ? (
-            <Icon
-              icon="octicon:trash-24"
-              width="23"
-              height="23"
-              className="deleteButton"
-              type="button"
-              onClick={() => {
-                this.props.removePost(this.props.post.id);
-              }}
-            >
-              {" "}
-            </Icon>
-          ) : null}
           <br></br>
           <br></br>
           <br></br>
