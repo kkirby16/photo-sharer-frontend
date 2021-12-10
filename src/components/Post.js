@@ -73,20 +73,22 @@ class Post extends Component {
               className="fitImage"
             ></img>
           )}{" "}
-          {this.handle_likes()}
-          <p className="likesAmount">
-            {this.props.post.likes.length == 1
-              ? this.props.post.likes.length + " like"
-              : this.props.post.likes.length + " likes"}{" "}
-          </p>
-          <li className="textForPosts">
-            <strong className="usernameAndCaption">
-              {this.props.post.user.username}:
-            </strong>{" "}
-            <span className="usernameAndCaption">
-              {this.props.post.caption}{" "}
-            </span>
-          </li>
+          <div className="postInfo">
+            {this.handle_likes()}
+            <li className="likesAmount">
+              {this.props.post.likes.length == 1
+                ? this.props.post.likes.length + " like"
+                : this.props.post.likes.length + " likes"}{" "}
+            </li>
+            <li className="textForPosts">
+              <strong className="usernameAndCaption">
+                {this.props.post.user.username}:
+              </strong>{" "}
+              <span className="usernameAndCaption">
+                {this.props.post.caption}{" "}
+              </span>
+            </li>
+          </div>
           <br></br>
           <br></br>
           <br></br>
