@@ -159,8 +159,6 @@ button {
 
 .deleteButton {
   position: relative;
-  bottom: 19vh;
-  left: 31%;
   cursor: pointer;
   z-index: 3;
 }
