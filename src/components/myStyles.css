@@ -707,6 +707,20 @@ input[type="file"]::file-selector-button {
   }
 }
 
+@media screen and (min-width: 500) and (max-width: 1096) {
+  .Post_ul {
+    width: 85%;
+  }
+
+  .commentForm {
+    left: 18%;
+  }
+
+  .wordWrap {
+    left: 32px;
+  }
+}
+
 @media screen and (min-width: 826) and (max-width: 1048) {
   .backgroundImageForLogin {
     background-image: url("https://photos.smugmug.com/photos/i-5bGGXHq/0/X4/i-5bGGXHq-X4.jpg");
