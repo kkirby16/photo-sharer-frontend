@@ -663,7 +663,7 @@ input[type="file"]::file-selector-button {
   }
 
   .deleteButton {
-    top: 2vh;
+    top: 5vh;
   }
 
   .likesAmount {
