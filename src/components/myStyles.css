@@ -213,7 +213,7 @@ button {
 .textForWelcome {
   position: relative;
   font-family: "Neue Helvetica";
-  font-size: clamp(0.89rem, 1.25vw, 1.5vw);
+  font-size: clamp(0.91rem, 1.25vw, 1.5vw);
   font-weight: 500;
   float: left;
   top: 1.85vh;
@@ -663,7 +663,7 @@ input[type="file"]::file-selector-button {
   }
 
   .deleteButton {
-    bottom: 16.2vh;
+    bottom: 3vw;
   }
 
   .likesAmount {
@@ -679,11 +679,18 @@ input[type="file"]::file-selector-button {
   }
 
   .mainPageTitleText {
-    right: 29.681vw;
+    right: 30.3vw;
   }
 
   .textForWelcome {
-    margin-top: 3.2%;
+    margin-top: -0.8%;
+  }
+
+  .logoutButton {
+    float: right;
+    margin-right: 1.389vw;
+    margin-top: 1.65vw;
+    cursor: pointer;
   }
 }
 
