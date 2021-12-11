@@ -685,18 +685,23 @@ input[type="file"]::file-selector-button {
   }
 }
 
-@media only screen and (max-height: 595) {
+/* @media only screen and (max-height: 595) {
   .searchIcon {
     top: 3.08%;
   }
-}
+} */
 
 @media only screen and (min-width: 500) and (max-width: 826) {
   .Post_ul {
+    position: relative;
     width: 85%;
+    right: 8.8%;
+    text-align: center;
   }
 
   .commentForm {
+    position: relative;
+    bottom: 10.5vh;
     left: 18%;
   }
 
