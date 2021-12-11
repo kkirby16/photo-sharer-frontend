@@ -34,7 +34,7 @@ button {
 
 .or_text {
   font-family: "Recoleta Alt";
-  font-size: 1.389vw;
+  font-size: clamp(1.57rem, 1.389vw, 1.389vw);
   color: white;
   position: relative;
   top: -2.5348542458809vh;
@@ -44,7 +44,7 @@ button {
   font-family: "Recoleta Alt";
   color: rgb(202, 152, 69);
 
-  animation: changeColor 40s infinite;
+  animation: changeColor 39s infinite;
 }
 
 @keyframes changeColor {
@@ -97,7 +97,7 @@ button {
 
 .home_page_title_text {
   font-family: "Nature Spirit";
-  font-size: clamp(4.5rem, 8.542vw, 8.8vw);
+  font-size: clamp(5.45rem, 8.542vw, 8.8vw);
   color: white;
   font-weight: 900;
   position: relative;
@@ -185,7 +185,7 @@ button {
 
 .mainPageTitleText {
   font-family: "Nature Spirit";
-  font-size: clamp(0.99rem, 2.292vw, 3.3vw);
+  font-size: clamp(1.02rem, 2.292vw, 3.3vw);
   color: black;
   font-weight: 300;
   position: relative;
@@ -211,11 +211,12 @@ button {
 }
 
 .textForWelcome {
+  position: relative;
   font-family: "Neue Helvetica";
-  font-size: clamp(0.87rem, 1.25vw, 1.5vw);
+  font-size: clamp(0.89rem, 1.25vw, 1.5vw);
   font-weight: 500;
   float: left;
-  margin-top: 1%;
+  top: 1.85vh;
 }
 
 .commentInput {
@@ -614,7 +615,7 @@ input[type="file"]::file-selector-button {
 
 .commentsContainer {
   position: relative;
-  top: -4.9vh;
+  top: -6.35vh;
   left: 2.7%;
 }
 
@@ -702,7 +703,7 @@ input[type="file"]::file-selector-button {
 
   .commentForm {
     position: relative;
-    bottom: 10.5vh;
+    bottom: 9.9vh;
     left: 18%;
   }
 
