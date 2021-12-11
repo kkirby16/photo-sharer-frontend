@@ -692,7 +692,7 @@ input[type="file"]::file-selector-button {
   }
 } */
 
-@media only screen and (max-width: 878) {
+@media only screen and (min-width: 480) and (max-width: 804) {
   .Post_ul {
     position: relative;
     width: 85%;
