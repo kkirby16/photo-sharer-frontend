@@ -685,13 +685,13 @@ input[type="file"]::file-selector-button {
   }
 }
 
-@media screen and (max-height: 595) {
+@media only screen and (max-height: 595) {
   .searchIcon {
     top: 3.08%;
   }
 }
 
-@media screen and (min-width: 500) and (max-width: 826) {
+@media only screen and (min-width: 500) and (max-width: 826) {
   .Post_ul {
     width: 85%;
   }
@@ -718,7 +718,7 @@ input[type="file"]::file-selector-button {
   }
 }
 
-@media screen and (min-width: 826) and (max-width: 1048) {
+@media only screen and (min-width: 826) and (max-width: 1048) {
   .backgroundImageForLogin {
     background-image: url("https://photos.smugmug.com/photos/i-5bGGXHq/0/X4/i-5bGGXHq-X4.jpg");
     background-position: left 94%;
