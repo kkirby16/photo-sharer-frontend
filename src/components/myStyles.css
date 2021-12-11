@@ -609,7 +609,7 @@ input[type="file"]::file-selector-button {
 .commentForm {
   position: relative;
   bottom: 10.5vh;
-  margin-left: clamp(124px, 4.5vw, 4.5vw);
+  margin-left: clamp(62px, 3vw, 3vw);
 }
 
 .commentsContainer {
