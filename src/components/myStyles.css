@@ -756,8 +756,9 @@ input[type="file"]::file-selector-button {
     left: 2px;
   }
 }
-@media only screen and (max-width: 1265px) {
-}
+
+/* @media only screen and (max-width: 1265px) {
+} */
 
 /* .uploadPostSection {
   background: white;
