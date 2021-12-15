@@ -59,13 +59,22 @@ class App extends React.Component {
       <div className="App">
         {loggedIn ? <Logout /> : null}
         {loggedIn ? (
-          <input
-            label="Filter Posts: "
-            placeholder="Search posts by username"
-            onChange={this.handleSearch}
-            value={this.state.filteredSearch}
-            className="searchByUsername"
-          />
+          <div>
+            <input
+              label="Filter Posts: "
+              placeholder="Search posts by username"
+              onChange={this.handleSearch}
+              value={this.state.filteredSearch}
+              className="searchByUsername"
+            />
+            <input
+              label="Filter Posts: "
+              placeholder="Search posts by user"
+              onChange={this.handleSearch}
+              value={this.state.filteredSearch}
+              className="searchByUsernameSmallScreens"
+            />
+          </div>
         ) : null}
         {loggedIn ? (
           <Icon
