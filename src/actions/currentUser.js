@@ -59,7 +59,6 @@ export const signup = (credentials, history) => {
       method: "POST",
       headers: {
         Accept: "application/json",
-        Authorization: localStorage.getItem("token"),
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
         "Access-Control-Allow-Origin":
