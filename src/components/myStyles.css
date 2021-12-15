@@ -150,8 +150,8 @@ button {
 }
 
 .fitImage {
-  max-width: 81.5%;
-  max-height: 81.5%;
+  max-width: 96.5%;
+  max-height: 96.5%;
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
@@ -445,14 +445,14 @@ h2.greeting {
 }
 
 .Post_ul {
-  width: 60%;
+  width: 51%;
   border: 1px solid #d1d1d1;
   border-radius: 1.5px;
   background-color: white;
   margin: 0 auto;
   margin-bottom: 28px;
   padding-left: 0px;
-  padding-top: 25px;
+  padding-top: 1%;
   height: auto;
   max-height: 1380px;
   overflow: auto;
