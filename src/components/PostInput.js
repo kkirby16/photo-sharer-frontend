@@ -71,7 +71,7 @@ class PostInput extends Component {
           <input
             name="caption"
             type="text"
-            placeholder="Add a caption"
+            placeholder=" Add a caption..."
             value={this.state.caption}
             onChange={this.handleChange}
             className="inputForCaption"
