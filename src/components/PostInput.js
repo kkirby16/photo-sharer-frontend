@@ -40,7 +40,7 @@ class PostInput extends Component {
       <div>
         <br></br>
         <p className="heavierWeightNeueHelvetica">Upload Post</p>
-        <form>
+        <form class="postInputForm">
           <label htmlFor="photo" className="uploadPhotoLabel">
             {" "}
             <Icon
@@ -71,6 +71,7 @@ class PostInput extends Component {
           <input
             name="caption"
             type="text"
+            placeholder="Add a caption"
             value={this.state.caption}
             onChange={this.handleChange}
             className="inputForCaption"
