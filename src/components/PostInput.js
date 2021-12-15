@@ -41,7 +41,7 @@ class PostInput extends Component {
         <br></br>
         <p className="heavierWeightNeueHelvetica">Upload Post</p>
         <form>
-          <label htmlFor="photo">
+          <label htmlFor="photo" className="uploadPhotoLabel">
             {" "}
             <Icon
               icon="bi:upload"
@@ -58,7 +58,7 @@ class PostInput extends Component {
             class="customFileInput"
             onChange={this.handleImageChange}
           />
-          <label htmlFor="caption">
+          <label htmlFor="caption" className="captionLabel">
             &nbsp;&nbsp;&nbsp;{" "}
             <Icon
               icon="fluent:text-align-left-20-regular"
