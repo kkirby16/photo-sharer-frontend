@@ -150,8 +150,8 @@ button {
 }
 
 .fitImage {
-  max-width: 96.5%;
-  max-height: 96.5%;
+  max-width: 98.5%;
+  max-height: 98.5%;
   margin: 0 auto;
   text-align: center;
   overflow: hidden;
@@ -195,6 +195,7 @@ button {
 
 .textForComments {
   font-family: "Neue Helvetica";
+  font-size: clamp(0.84rem, 1.111vw, 1.4vw);
   font-weight: 500;
   border: none;
   background: none;
@@ -445,7 +446,7 @@ h2.greeting {
 }
 
 .Post_ul {
-  width: 51%;
+  width: 50%;
   border: 1px solid #d1d1d1;
   border-radius: 1.5px;
   background-color: white;
@@ -506,7 +507,7 @@ h2.greeting {
 }
 
 .inputForCaption {
-  border: 1px solid #aeaeae;
+  border: 1px solid #d1d1d1;
   background: #f8f8f8;
   border-radius: 4.5px;
   height: 20px;
@@ -520,7 +521,7 @@ h2.greeting {
 }
 
 .inputForCaption::placeholder {
-  color: #aeaeae;
+  color: #828282;
 }
 
 .createPostButton {
@@ -677,6 +678,10 @@ input[type="file"]::file-selector-button {
     max-height: 95%;
   }
 
+  .postInputForm {
+    width: 62.5%;
+  }
+
   .usernameAndCaption {
     right: 27.583vw;
   }
@@ -751,6 +756,10 @@ input[type="file"]::file-selector-button {
     width: 85%;
     right: 8.8%;
     text-align: center;
+  }
+
+  .postInputForm {
+    width: 62.5%;
   }
 
   .commentForm {
