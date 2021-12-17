@@ -44,7 +44,7 @@ button {
   font-family: "Recoleta Alt";
   color: rgb(202, 152, 69);
 
-  animation: changeColor 39s infinite;
+  animation: changeColor 37s infinite;
 }
 
 @keyframes changeColor {
@@ -521,7 +521,7 @@ h2.greeting {
 }
 
 .inputForCaption::placeholder {
-  color: #828282;
+  color: #7b7b7b;
 }
 
 .createPostButton {
