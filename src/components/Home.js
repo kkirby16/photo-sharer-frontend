@@ -33,6 +33,7 @@ const Home = ({}) => (
           position: "relative",
           top: "-18px",
         }}
+        className="signupAndLoginText"
       >
         sign up
       </Link>{" "}
@@ -47,6 +48,7 @@ const Home = ({}) => (
           position: "relative",
           top: "-18px",
         }}
+        className="signupAndLoginText"
       >
         log in
       </Link>
