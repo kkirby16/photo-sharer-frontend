@@ -679,7 +679,7 @@ input[type="file"]::file-selector-button {
   }
 
   .signupAndLoginText {
-    font-size: 39px !important;
+    font-size: 43px !important;
   }
 
   .or_text {
@@ -717,6 +717,11 @@ input[type="file"]::file-selector-button {
 
   .commentForm {
     left: 19%;
+  }
+
+  .deleteCommentButton {
+    position: relative;
+    right: 2vh;
   }
 
   .post {
@@ -793,13 +798,21 @@ input[type="file"]::file-selector-button {
   }
 } */
 
+@media only screen and (min-width: 480px) and (max-width: 577) {
+  .deleteCommentButton {
+    position: relative;
+    bottom: 16px;
+    left: 13vh !important;
+  }
+}
+
 @media only screen and (min-width: 480px) and (max-width: 672px) {
   .textForComments {
     max-width: 67%;
   }
 
   .Post_ul {
-    width: 89%;
+    width: 89% !important;
     text-align: center;
   }
 }
