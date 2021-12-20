@@ -454,7 +454,7 @@ h2.greeting {
   margin: 0 auto;
   margin-bottom: 28px;
   padding-left: 0px;
-  padding-top: 1%;
+  padding-top: 0.35%;
   height: auto;
   max-height: 1380px;
   overflow: auto;
@@ -671,7 +671,7 @@ input[type="file"]::file-selector-button {
   }
 
   .signupAndLoginText {
-    font-size: 30px;
+    font-size: 30px !important;
   }
 
   .or_text {
@@ -721,6 +721,10 @@ input[type="file"]::file-selector-button {
     top: -7.3vh;
   }
 
+  .textForComments {
+    max-width: 57%;
+  }
+
   .searchIcon {
     display: none;
   }
@@ -758,6 +762,11 @@ input[type="file"]::file-selector-button {
 
   .textForPosts {
     left: 29.5%;
+  }
+
+  span.usernameAndCaption {
+    display: block;
+    width: 80.5%;
   }
 }
 
@@ -800,6 +809,13 @@ input[type="file"]::file-selector-button {
     background-size: 98.5% !important;
     width: 215% !important;
     height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 804px) and (max-width: 1056px) {
+  .backgroundImageForLogin {
+    width: 202.5%;
+    margin-top: -2.5%;
   }
 }
 
