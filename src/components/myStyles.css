@@ -159,6 +159,7 @@ button {
 
 .deleteButton {
   position: relative;
+  top: 9px;
   cursor: pointer;
   z-index: 3;
 }
@@ -662,6 +663,17 @@ input[type="file"]::file-selector-button {
 }
 
 @media only screen and (max-width: 480px) {
+  .backgroundImageForLogin {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 425%;
+    margin-left: -92%;
+  }
+
+  .signupAndLoginText {
+    font-size: 30px;
+  }
+
   .or_text {
     font-size: 5.7vw;
   }
@@ -697,7 +709,8 @@ input[type="file"]::file-selector-button {
   }
 
   .deleteButton {
-    top: 2.4vh;
+    position: relative;
+    top: 10.5px;
   }
 
   .likesAmount {
@@ -741,6 +754,10 @@ input[type="file"]::file-selector-button {
 
   .searchByUsernameSmallScreens {
     display: inline-block;
+  }
+
+  .textForPosts {
+    left: 29.5%;
   }
 }
 
