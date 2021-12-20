@@ -689,6 +689,7 @@ input[type="file"]::file-selector-button {
   .Post_ul {
     position: relative;
     width: 105%;
+    padding-top: 2%;
     right: 8.8%;
     text-align: center;
   }
@@ -700,10 +701,18 @@ input[type="file"]::file-selector-button {
 
   .postInputForm {
     width: 62.5%;
+    padding: 13px 59.5px;
+  }
+
+  .inputForCaption {
+    margin-top: 4%;
+    margin-bottom: 7.5%;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
   }
 
   .usernameAndCaption {
-    right: 27.583vw;
+    right: 15.395vw;
   }
 
   .commentForm {
