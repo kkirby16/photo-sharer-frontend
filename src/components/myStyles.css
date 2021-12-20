@@ -170,7 +170,7 @@ button {
 
 .usernameAndCaption {
   position: relative;
-  right: 14.583vw;
+  right: 11.82vw;
 }
 
 .logoutButton {
@@ -454,7 +454,7 @@ h2.greeting {
   margin: 0 auto;
   margin-bottom: 28px;
   padding-left: 0px;
-  padding-top: 0.35%;
+  padding-top: 0.5%;
   height: auto;
   max-height: 1380px;
   overflow: auto;
@@ -788,6 +788,10 @@ input[type="file"]::file-selector-button {
     width: 62.5%;
   }
 
+  .usernameAndCaption {
+    right: 11vw;
+  }
+
   .commentForm {
     position: relative;
     bottom: 10.5vh;
@@ -837,10 +841,6 @@ input[type="file"]::file-selector-button {
 }
 
 @media only screen and (max-width: 1195px) {
-  .usernameAndCaption {
-    right: 14.883vw;
-  }
-
   .deleteButton {
     bottom: 20.7vh;
   }
