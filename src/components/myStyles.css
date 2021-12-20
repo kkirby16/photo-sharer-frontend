@@ -776,11 +776,28 @@ input[type="file"]::file-selector-button {
   }
 } */
 
-@media only screen and (min-width: 480px) and (max-width: 804px) {
+@media only screen and (min-width: 480px) and (max-width: 672px) {
+  .textForComments {
+    max-width: 67%;
+  }
+
+  .Post_ul {
+    width: 89%;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 934px) {
+  .backgroundImageForSignup {
+    width: 230%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1097px) {
   .Post_ul {
     position: relative;
     width: 85%;
-    right: 8.8%;
+    right: 2.8%;
     text-align: center;
   }
 
@@ -789,7 +806,7 @@ input[type="file"]::file-selector-button {
   }
 
   .usernameAndCaption {
-    right: 11vw;
+    right: 19.6vw;
   }
 
   .commentForm {
