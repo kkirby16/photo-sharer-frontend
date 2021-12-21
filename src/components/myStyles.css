@@ -678,6 +678,11 @@ input[type="file"]::file-selector-button {
     margin-left: -92%;
   }
 
+  .backgroundImageForSignup {
+    background-size: 219%;
+    width: 132%;
+  }
+
   .signupAndLoginText {
     font-size: 43px !important;
   }
@@ -721,7 +726,7 @@ input[type="file"]::file-selector-button {
 
   .deleteCommentButton {
     position: relative;
-    right: 2vh;
+    left: 2.75vh;
   }
 
   .post {
@@ -744,7 +749,7 @@ input[type="file"]::file-selector-button {
   }
 
   .textForComments {
-    max-width: 57%;
+    max-width: 50.2%;
   }
 
   .searchIcon {
@@ -798,7 +803,7 @@ input[type="file"]::file-selector-button {
   }
 } */
 
-@media only screen and (min-width: 480px) and (max-width: 577) {
+@media only screen and (min-width: 480px) and (max-width: 577px) {
   .deleteCommentButton {
     position: relative;
     bottom: 16px;
