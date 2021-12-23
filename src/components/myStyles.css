@@ -196,7 +196,7 @@ button {
 
 .textForComments {
   font-family: "Neue Helvetica";
-  font-size: clamp(0.96rem, 1.111vw, 1.4vw);
+  font-size: clamp(0.96rem, 1.111vw, 1vw);
   font-weight: 500;
   border: none;
   background: none;
@@ -223,7 +223,7 @@ button {
 
 .commentInput {
   font-family: "Neue Helvetica";
-  font-size: clamp(0.93rem, 1.007vw, 1.3vw);
+  font-size: clamp(0.93rem, 1.007vw, 0.8vw);
   font-weight: 800;
   letter-spacing: 0.017vw;
   text-align: left;
@@ -463,7 +463,7 @@ h2.greeting {
 
 .likesAmount {
   font-weight: 600;
-  margin-left: clamp(-62%, -60%, -60%);
+  margin-left: clamp(-62%, -60%, -99%);
   /* margin-left: -60%; */
   margin-top: 3.3%;
 }
@@ -953,6 +953,12 @@ input[type="file"]::file-selector-button {
 
   .wordWrap {
     left: 2px;
+  }
+}
+
+@media only screen and (min-width: 1499px) {
+  .backgroundImage {
+    background-size: 100%;
   }
 }
 
