@@ -44,7 +44,7 @@ button {
   font-family: "Recoleta Alt";
   color: rgb(202, 152, 69);
 
-  animation: changeColor 36s infinite;
+  animation: changeColor 35s infinite;
 }
 
 @keyframes changeColor {
@@ -97,7 +97,7 @@ button {
 
 .home_page_title_text {
   font-family: "Nature Spirit";
-  font-size: clamp(5.45rem, 8.542vw, 8.8vw);
+  font-size: clamp(5.6rem, 8.542vw, 8.8vw);
   color: white;
   font-weight: 900;
   position: relative;
@@ -678,13 +678,26 @@ input[type="file"]::file-selector-button {
     margin-left: -92%;
   }
 
+  .loginForm {
+    width: 240px;
+    height: 200px;
+  }
+
+  .signupForm {
+    width: 240px;
+    height: 225px;
+  }
+
+  .styledSignupLink {
+    left: 33.2%;
+  }
   .backgroundImageForSignup {
     background-size: 219%;
     width: 132%;
   }
 
   .signupAndLoginText {
-    font-size: 43px !important;
+    font-size: 44.5px !important;
   }
 
   .or_text {
@@ -808,6 +821,11 @@ input[type="file"]::file-selector-button {
     position: relative;
     bottom: 16px;
     left: 13vh !important;
+  }
+
+  .textForPosts {
+    position: relative;
+    left: 39%;
   }
 }
 
