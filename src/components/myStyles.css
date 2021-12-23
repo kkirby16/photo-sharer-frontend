@@ -463,7 +463,7 @@ h2.greeting {
 
 .likesAmount {
   font-weight: 600;
-  margin-left: clamp(-62%, -60%, -99%);
+  margin-left: clamp(-62%, -60%, -60%);
   /* margin-left: -60%; */
   margin-top: 3.3%;
 }
@@ -956,9 +956,26 @@ input[type="file"]::file-selector-button {
   }
 }
 
+@media only screen and (min-height: 887px) {
+  .searchIcon {
+    top: 1.8%;
+  }
+}
+
 @media only screen and (min-width: 1499px) {
   .backgroundImage {
     background-size: 100%;
+  }
+}
+
+@media only screen and (min-width: 1740px) {
+  .searchIcon {
+    left: 43.45%;
+  }
+
+  .likesAmount {
+    margin-left: none;
+    margin-right: 62.8%;
   }
 }
 
