@@ -10,7 +10,7 @@ const NavBar = ({ currentUser }) => {
       <div>
         <li className="no_bullet_point_lis">
           <strong className="textForWelcome">
-            &nbsp;&nbsp; Welcome, {currentUser.name}
+            &nbsp;&nbsp; Hi, {currentUser.name}
           </strong>
           <span className="mainPageTitleText">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
