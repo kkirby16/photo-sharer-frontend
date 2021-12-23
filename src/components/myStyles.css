@@ -715,7 +715,7 @@ input[type="file"]::file-selector-button {
   .createPostButton {
     height: 43px;
     width: 160px;
-    padding-top: 0.5%;
+    padding-top: 1.2%;
     background: none;
     color: #3e95ef;
     -webkit-background-clip: initial;
@@ -726,7 +726,7 @@ input[type="file"]::file-selector-button {
   .createPostButton:hover {
     height: 43px;
     width: 160px;
-    padding-top: 0.5%;
+    padding-top: 1.2%;
     background: none;
     color: rgb(232, 137, 85);
     -webkit-background-clip: initial;
@@ -735,7 +735,7 @@ input[type="file"]::file-selector-button {
   }
 
   .createPostIcon {
-    left: -7%;
+    left: -8%;
   }
 
   .fitImage {
