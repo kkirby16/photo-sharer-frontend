@@ -712,6 +712,11 @@ input[type="file"]::file-selector-button {
     text-align: center;
   }
 
+  .createPostButton {
+    padding-top: 2.5%;
+    background: #3e95ef;
+  }
+
   .fitImage {
     max-width: 95%;
     max-height: 95%;
@@ -798,6 +803,11 @@ input[type="file"]::file-selector-button {
 
   .searchByUsernameSmallScreens {
     display: inline-block;
+    width: 136.5px;
+  }
+
+  input.searchByUsernameSmallScreens {
+    padding-left: 4px;
   }
 
   .textForPosts {
