@@ -568,7 +568,7 @@ h2.greeting {
 
 .createPostIcon {
   position: relative;
-  top: 3.5px;
+  top: 4.5px;
   left: -4px;
   transition: all 0.12s ease;
 }
@@ -710,6 +710,11 @@ input[type="file"]::file-selector-button {
     padding-top: 2%;
     right: 8.8%;
     text-align: center;
+  }
+
+  input[type="file"]::file-selector-button {
+    border-radius: 4px;
+    padding: 9px 11.5px;
   }
 
   .createPostButton {
