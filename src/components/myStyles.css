@@ -524,7 +524,7 @@ h2.greeting {
 }
 
 .inputForCaption::placeholder {
-  color: #717171;
+  color: #6c6c6c;
 }
 
 .createPostButton {
@@ -714,7 +714,11 @@ input[type="file"]::file-selector-button {
 
   .createPostButton {
     padding-top: 2.5%;
-    background: #3e95ef;
+    background: none;
+    color: #3e95ef;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
   }
 
   .fitImage {
