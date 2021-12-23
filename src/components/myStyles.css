@@ -97,7 +97,7 @@ button {
 
 .home_page_title_text {
   font-family: "Nature Spirit";
-  font-size: clamp(5.6rem, 8.542vw, 8.8vw);
+  font-size: clamp(5.7rem, 8.542vw, 8.8vw);
   color: white;
   font-weight: 900;
   position: relative;
@@ -186,7 +186,7 @@ button {
 
 .mainPageTitleText {
   font-family: "Nature Spirit";
-  font-size: clamp(1.02rem, 2.292vw, 3.3vw);
+  font-size: clamp(1.07rem, 2.292vw, 3.3vw);
   color: black;
   font-weight: 300;
   position: relative;
@@ -196,7 +196,7 @@ button {
 
 .textForComments {
   font-family: "Neue Helvetica";
-  font-size: clamp(0.84rem, 1.111vw, 1.4vw);
+  font-size: clamp(0.96rem, 1.111vw, 1.4vw);
   font-weight: 500;
   border: none;
   background: none;
