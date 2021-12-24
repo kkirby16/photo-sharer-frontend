@@ -972,11 +972,6 @@ input[type="file"]::file-selector-button {
   .searchIcon {
     left: 43.45%;
   }
-
-  .likesAmount {
-    margin-left: none;
-    margin-right: 75%;
-  }
 }
 
 /* @media only screen and (max-width: 1265px) {
