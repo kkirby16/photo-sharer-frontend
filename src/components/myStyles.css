@@ -966,17 +966,18 @@ input[type="file"]::file-selector-button {
   .backgroundImage {
     background-size: 100%;
   }
-  
-  @media only screen and (min-width: 1510px) {
-    .backgroundImage {
-      background-size: 100%;
-    }
+}
 
-    .likesAmount {  
-      margin-left: none;
-      margin-right: 62.5%;
-    }
+@media only screen and (min-width: 1510px) {
+  .backgroundImage {
+    background-size: 100%;
   }
+
+  .likesAmount {
+    margin-left: none;
+    margin-right: 62.5%;
+  }
+}
 
 @media only screen and (min-width: 1740px) {
   .searchIcon {
