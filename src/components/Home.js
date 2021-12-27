@@ -7,20 +7,27 @@ import { gsap } from "gsap";
 function Home() {
   let headingFirst = useRef(null);
   let headingSecond = useRef(null);
+  let descriptiveText = useRef(null);
 
   useEffect(() => {
     gsap.to(headingFirst, {
-      duration: 0.8,
+      duration: 0.9,
       opacity: 1,
       y: -20,
       ease: "power3",
     });
     gsap.to(headingSecond, {
-      duration: 0.8,
+      duration: 0.9,
       opacity: 1,
       y: -20,
       ease: "power3",
       delay: 0.1,
+    });
+    gsap.from(descriptiveText, {
+      duration: 0.6,
+      x: "-100vw",
+      delay: 0.2,
+      ease: "power2.in",
     });
   }, []);
 
@@ -45,16 +52,23 @@ function Home() {
         </li>
         <br></br>
         <br></br>
-        <li className="no_bullet_point_lis home_page_text">
-          Post photos with captions for others to see
-        </li>
-        <li className="no_bullet_point_lis home_page_text">
-          See photos others have posted
-        </li>
-        <li className="no_bullet_point_lis home_page_text">
-          Comment on and like posts to{" "}
-          <span className="interact_word">interact</span>{" "}
-        </li>
+        <div
+          ref={(el) => {
+            descriptiveText = el;
+          }}
+          className="descriptive_home_page_text"
+        >
+          <li className="no_bullet_point_lis home_page_text">
+            Post photos with captions for others to see
+          </li>
+          <li className="no_bullet_point_lis home_page_text">
+            See photos others have posted
+          </li>
+          <li className="no_bullet_point_lis home_page_text">
+            Comment on and like posts to{" "}
+            <span className="interact_word">interact</span>{" "}
+          </li>
+        </div>
         <br></br>
         <br></br>
         <Link
