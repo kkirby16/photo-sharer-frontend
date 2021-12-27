@@ -3,8 +3,6 @@ import { resetSignupForm } from "./signupForm.js";
 import { getAllPosts } from "./allPosts.js";
 import { clearAllPosts } from "./allPosts.js";
 
-//should build action creators files around each piece of state.
-
 export const setCurrentUser = (user) => {
   return {
     type: "SET_CURRENT_USER",
