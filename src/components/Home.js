@@ -5,14 +5,22 @@ import "./myStyles.css";
 import { gsap } from "gsap";
 
 function Home() {
-  let siteHeading = useRef(null);
+  let headingFirst = useRef(null);
+  let headingSecond = useRef(null);
 
   useEffect(() => {
-    gsap.to(siteHeading, {
+    gsap.to(headingFirst, {
       duration: 0.8,
       opacity: 1,
       y: -20,
       ease: "power3",
+    });
+    gsap.to(headingSecond, {
+      duration: 0.8,
+      opacity: 1,
+      y: -20,
+      ease: "power3",
+      delay: .1;
     });
   }, []);
 
@@ -21,7 +29,7 @@ function Home() {
       <h2 className="greeting">
         <li
           ref={(el) => {
-            siteHeading = el;
+            headingFirst = el;
           }}
           className="no_bullet_point_lis home_page_title_text "
         >
@@ -29,7 +37,7 @@ function Home() {
         </li>
         <li
           ref={(el) => {
-            siteHeading = el;
+            headingSecond = el;
           }}
           className="no_bullet_point_lis home_page_title_text "
         >
