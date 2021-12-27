@@ -20,7 +20,7 @@ function Home() {
       opacity: 1,
       y: -20,
       ease: "power3",
-      delay: .1;
+      delay: 0.1,
     });
   }, []);
 
