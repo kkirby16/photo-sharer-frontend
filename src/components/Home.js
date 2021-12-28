@@ -8,6 +8,7 @@ function Home() {
   let headingFirst = useRef(null);
   let headingSecond = useRef(null);
   let descriptiveText = useRef(null);
+  let signupAndLoginText = useRef(null);
 
   useEffect(() => {
     gsap.to(headingFirst, {
@@ -28,6 +29,13 @@ function Home() {
       x: "-100vw",
       delay: 0.15,
       ease: "power2.in",
+    });
+    gsap.to(signupAndLoginText, {
+      duration: 0.85,
+      opacity: 1,
+      y: -20,
+      ease: "power3",
+      delay: 0.1,
     });
   }, []);
 
@@ -73,6 +81,9 @@ function Home() {
         <br></br>
         <Link
           to="/signup"
+          ref={(el) => {
+            signupAndLoginText = el;
+          }}
           style={{
             fontFamily: "Recoleta Alt",
             color: "white",
@@ -88,6 +99,9 @@ function Home() {
         <span className="or_text">&nbsp;&nbsp; or &nbsp;&nbsp;</span>{" "}
         <Link
           to="/login"
+          ref={(el) => {
+            signupAndLoginText = el;
+          }}
           style={{
             fontFamily: "Recoleta Alt",
             color: "white",
