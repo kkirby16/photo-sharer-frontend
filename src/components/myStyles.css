@@ -112,6 +112,10 @@ button {
   display: inline-block;
 }
 
+.signupAndLoginText {
+  opacity: 0;
+}
+
 .image_size {
   width: 100%;
   height: 38.194vw;
