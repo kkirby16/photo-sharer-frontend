@@ -5,6 +5,17 @@ import { connect } from "react-redux";
 import "./myStyles.css";
 
 const NavBar = ({ currentUser }) => {
+  let mainPageTitleText = useRef(null);
+
+  useEffect(() => {
+    gsap.to(mainPageTitleText, {
+      duration: 0.9,
+      opacity: 1,
+      y: -15,
+      ease: "power3",
+    });
+  });
+
   if (currentUser) {
     return (
       <div>
@@ -12,7 +23,12 @@ const NavBar = ({ currentUser }) => {
           <strong className="textForWelcome">
             &nbsp;&nbsp; Hi, {currentUser.name}
           </strong>
-          <span className="mainPageTitleText">
+          <span
+            className="mainPageTitleText"
+            ref={(el) => {
+              mainPageTitleText = el;
+            }}
+          >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Photo Sharer
           </span>
