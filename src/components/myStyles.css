@@ -194,6 +194,7 @@ button {
   font-size: clamp(1.07rem, 2.292vw, 3.3vw);
   color: black;
   font-weight: 300;
+  opacity: 0;
   position: relative;
   top: 1.2674271229404vh;
   right: 33.681vw;
