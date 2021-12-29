@@ -7,17 +7,6 @@ import { connect } from "react-redux";
 import { gsap } from "gsap";
 
 const MainContainer = (props) => {
-  let mainPageTitleText = useRef(null);
-
-  useEffect(() => {
-    gsap.to(mainPageTitleText, {
-      duration: 0.9,
-      opacity: 1,
-      y: -15,
-      ease: "power3",
-    });
-  });
-
   if (props.currentUser !== null) {
     return (
       <div className="MainContainer greyBackground">
