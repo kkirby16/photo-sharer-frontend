@@ -10,10 +10,11 @@ const NavBar = ({ currentUser }) => {
 
   useEffect(() => {
     gsap.to(mainPageTitleText, {
-      duration: 0.9,
+      duration: 1,
       opacity: 1,
       y: -15,
       ease: "power3",
+      delay: 0.1,
     });
   });
 
