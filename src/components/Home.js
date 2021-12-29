@@ -32,14 +32,14 @@ function Home() {
       ease: "power2.in",
     });
     gsap.to(signupText, {
-      duration: 0.85,
+      duration: 0.9,
       opacity: 1,
       y: -20,
       ease: "power3",
       delay: 0.1,
     });
     gsap.to(loginText, {
-      duration: 0.85,
+      duration: 0.9,
       opacity: 1,
       y: -20,
       ease: "power3",
