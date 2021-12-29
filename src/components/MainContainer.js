@@ -1,10 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Posts from "./Posts.js";
 import PostInput from "./PostInput.js";
 import Home from "./Home.js";
 import "./myStyles.css";
 import { connect } from "react-redux";
-import { gsap } from "gsap";
 
 const MainContainer = (props) => {
   if (props.currentUser !== null) {
