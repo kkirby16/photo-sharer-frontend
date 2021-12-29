@@ -1,8 +1,9 @@
 //it is wise to build little tiny chunks/representations of our dom in their own components.
 
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { connect } from "react-redux";
 import "./myStyles.css";
+import { gsap } from "gsap";
 
 const NavBar = ({ currentUser }) => {
   let mainPageTitleText = useRef(null);
