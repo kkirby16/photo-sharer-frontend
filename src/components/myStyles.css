@@ -1,21 +1,18 @@
 @font-face {
   font-family: "Neue Helvetica";
   src: url("../fonts/helvetica_neue_lt_45_light-webfont.woff");
-  /*public/assets/fonts/helvetica_neue_lt_45_light-webfont.woff*/
   font-style: normal;
 }
 
 @font-face {
   font-family: "Recoleta Alt";
   src: url("../fonts/recoletaalt-medium-webfont.woff");
-  /*public/assets/fonts/helvetica_neue_lt_45_light-webfont.woff*/
   font-style: normal;
 }
 
 @font-face {
   font-family: "Nature Spirit";
   src: url("../fonts/naturespiritrough-webfont.woff");
-  /*public/assets/fonts/helvetica_neue_lt_45_light-webfont.woff*/
   font-style: normal;
 }
 
@@ -215,7 +212,6 @@ button {
   top: 1.4vh;
   left: 41%;
   text-align: left;
-  /* word-wrap: normal; */
 }
 
 .textForWelcome {
@@ -304,8 +300,6 @@ button {
 
 .loginAndSignupInputs {
   margin-bottom: 5px;
-  /* border-width: 1px; */
-  /* border-radius: 2.5px; */
   width: 215px;
   padding-left: 8px;
   padding-top: 8px;
@@ -324,10 +318,7 @@ button {
   width: 340px;
   height: 260px;
   padding: 80px 40px;
-  /* background: rgba(74, 74, 75, 0.493); */
   background: rgba(0, 0, 0, 0.35);
-  /* background: rgba(9, 44, 2, 0.39); */
-
   backdrop-filter: blur(4px);
   border-radius: 1.5px;
 }
@@ -344,10 +335,7 @@ button {
   width: 340px;
   height: 260px;
   padding: 80px 40px;
-  /* background: rgba(74, 74, 75, 0.493); */
   background: rgba(0, 0, 0, 0.35);
-  /* background: rgba(9, 44, 2, 0.39); */
-
   backdrop-filter: blur(2.5px);
   border-radius: 1.5px;
 }
@@ -852,12 +840,6 @@ input[type="file"]::file-selector-button {
   }
 }
 
-/* @media only screen and (max-height: 595) {
-  .searchIcon {
-    top: 3.08%;
-  }
-} */
-
 @media only screen and (min-width: 480px) and (max-width: 577px) {
   .deleteCommentButton {
     position: relative;
@@ -935,17 +917,6 @@ input[type="file"]::file-selector-button {
   }
 }
 
-/* @media only screen and (min-width: 826) and (max-width: 1048) {
-  .backgroundImageForLogin {
-    background-image: url("https://photos.smugmug.com/photos/i-5bGGXHq/0/X4/i-5bGGXHq-X4.jpg");
-    background-position: left 94%;
-    background-repeat: "no-repeat";
-    background-size: 92% !important;
-    width: 139.5% !important;
-    height: 100vh;
-  }
-} */
-
 @media only screen and (max-width: 932px) {
   .postInputForm {
     width: 62.5%;
@@ -990,13 +961,3 @@ input[type="file"]::file-selector-button {
     left: 43.45%;
   }
 }
-
-/* @media only screen and (max-width: 1265px) {
-} */
-
-/* .uploadPostSection {
-  background: white;
-  width: 300px;
-  height: 100px;
-  border-radius: 2px;
-} */
