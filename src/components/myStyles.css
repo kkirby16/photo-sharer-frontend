@@ -844,7 +844,7 @@ input[type="file"]::file-selector-button {
   .deleteCommentButton {
     position: relative;
     bottom: 16px;
-    left: 13vh !important;
+    left: 6vh !important;
   }
 
   .textForPosts {
