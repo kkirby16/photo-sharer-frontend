@@ -26,7 +26,7 @@ function Home() {
       delay: 0.1,
     });
     gsap.from(descriptiveText, {
-      duration: 0.6,
+      duration: 0.7,
       x: "-100vw",
       delay: 0.15,
       ease: "power2.in",
