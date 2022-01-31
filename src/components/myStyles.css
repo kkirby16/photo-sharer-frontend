@@ -143,7 +143,7 @@ button {
 }
 
 .backgroundImageForSignup {
-  background-image: url("https://photos.smugmug.com/photos/i-9dK7PhM/0/X4/i-9dK7PhM-X4.jpg");
+  background-image: url("/src/images/login_background.jpeg");
   background-position: "center";
   background-size: 77%;
   width: 132%;
@@ -901,7 +901,7 @@ input[type="file"]::file-selector-button {
   }
 
   .backgroundImageForLogin {
-    background-image: url("https://photos.smugmug.com/photos/i-5bGGXHq/0/X4/i-5bGGXHq-X4.jpg");
+    background-image: url("/src/images/login_background.jpeg");
     background-position: left 94%;
     background-repeat: "no-repeat";
     background-size: 98.5% !important;
