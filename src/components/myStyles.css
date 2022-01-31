@@ -134,7 +134,7 @@ button {
 }
 
 .backgroundImageForLogin {
-  background-image: url("../public/login_background.jpeg");
+  background-image: url("../../public/login_background.jpeg");
   background-position: left 94%;
   background-repeat: "no-repeat";
   background-size: 72.5%;
