@@ -26,9 +26,9 @@ function Home() {
       delay: 0.1,
     });
     gsap.from(descriptiveText, {
-      duration: 0.87,
+      duration: 0.95,
       x: "-100vw",
-      delay: 0.15,
+      delay: 0.12,
       ease: "power2.in",
     });
     gsap.to(signupText, {
