@@ -666,10 +666,10 @@ input[type="file"]::file-selector-button {
   }
 
   .backgroundImageForSignup {
-    background-size: contain;
+    background-size: 247%;
     background-repeat: no-repeat;
-    width: 425%;
-    margin-left: -92%;
+    width: 132%;
+    margin-left: -32%;
   }
 
   .loginForm {
@@ -684,10 +684,6 @@ input[type="file"]::file-selector-button {
 
   .styledSignupLink {
     left: 33.2%;
-  }
-  .backgroundImageForSignup {
-    background-size: 219%;
-    width: 132%;
   }
 
   .signupAndLoginText {
