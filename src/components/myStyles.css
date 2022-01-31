@@ -144,11 +144,11 @@ button {
 
 .backgroundImageForSignup {
   background-image: url("/src/images/login_background.jpeg");
-  background-position: "center";
-  background-size: 77%;
-  width: 132%;
+  background-position: left 94%;
+  background-repeat: "no-repeat";
+  background-size: 72.5%;
+  width: 139.5%;
   height: 100vh;
-  margin: auto;
 }
 
 .fitImage {
@@ -665,7 +665,7 @@ input[type="file"]::file-selector-button {
     padding-right: 15%;
   }
 
-  .backgroundImageForLogin {
+  .backgroundImageForSignup {
     background-size: contain;
     background-repeat: no-repeat;
     width: 425%;
@@ -900,7 +900,7 @@ input[type="file"]::file-selector-button {
     font-size: 4.1vw;
   }
 
-  .backgroundImageForLogin {
+  .backgroundImageForSignup {
     background-image: url("/src/images/login_background.jpeg");
     background-position: left 94%;
     background-repeat: "no-repeat";
@@ -911,7 +911,7 @@ input[type="file"]::file-selector-button {
 }
 
 @media only screen and (min-width: 804px) and (max-width: 1056px) {
-  .backgroundImageForLogin {
+  .backgroundImageForSignup {
     width: 202.5%;
     margin-top: -2.5%;
   }
