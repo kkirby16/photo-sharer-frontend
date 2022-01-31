@@ -25,7 +25,7 @@ const Login = ({ loginFormData, updateLoginForm, login, history }) => {
 
   return (
     //the third destructured variable above is a beefed up reduxed version of that action creator
-    <div className="backgroundImageForLogin">
+    <div className="backgroundImageForSignup">
       <br></br>
       <br></br>
       <div className="loginForm">
