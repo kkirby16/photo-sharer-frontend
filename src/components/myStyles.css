@@ -670,6 +670,7 @@ input[type="file"]::file-selector-button {
     background-repeat: no-repeat;
     width: 132%;
     margin-left: -32%;
+    margin-top: -11%;
   }
 
   .loginForm {
