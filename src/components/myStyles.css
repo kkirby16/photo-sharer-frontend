@@ -143,7 +143,7 @@ button {
 }
 
 .backgroundImageForSignup {
-  background-image: url("/src/images/login_background.jpeg");
+  background-image: url("/src/images/signup_background.jpeg");
   background-position: left 94%;
   background-repeat: "no-repeat";
   background-size: 72.5%;
@@ -897,7 +897,7 @@ input[type="file"]::file-selector-button {
   }
 
   .backgroundImageForSignup {
-    background-image: url("/src/images/login_background.jpeg");
+    background-image: url("/src/images/signup_background.jpeg");
     background-position: left 94%;
     background-repeat: "no-repeat";
     background-size: 98.5% !important;
