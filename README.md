@@ -4,6 +4,8 @@ I built a photo sharing app which has some similarities to Instagram. This app h
 
 I've always liked Instagram and posting my own photography there. So, for my final project I decided to make an app that's similar to Instagram in ways.<br><br>
 
+Live Site: https://photo-sharer-kkirby16.netlify.app/
+
 ###
 
 ###
@@ -31,6 +33,8 @@ I've also added custom CSS to style my frontend.
 -Active Storage for image upload
 
 -Custom CSS
+
+-Media queries for responsiveness
 
 ## To install and run:
 
@@ -69,6 +73,8 @@ I've also added custom CSS to style my frontend.
 -You can search posts by username in the search bar at the top of the site.
 
 -If you want to logout of the site, you can press the icon in the top right corner of the screen.
+
+Live Site: https://photo-sharer-kkirby16.netlify.app/
 
 Video of how to use my app: https://youtu.be/cJb1p153Y-0
 
