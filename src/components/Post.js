@@ -19,6 +19,7 @@ class Post extends Component {
   };
 
   users_like = () => {
+    //returning the actual like object that happened by the current user on this post.
     return this.props.post.likes.find(
       (like) => like.user_id === this.props.currentUser.id
     );
@@ -27,11 +28,12 @@ class Post extends Component {
   handle_likes = () => {
     if (
       !this.props.post.likes.some(
+        //checks if there aren't any likes on this post where the user_id of the like is equal to the current user's id
         (like) => like.user_id === this.props.currentUser.id
       )
     ) {
       return (
-        <Icon
+        <Icon //like button
           icon="fluent:heart-20-regular"
           width="30"
           height="30"
@@ -43,7 +45,7 @@ class Post extends Component {
       );
     } else {
       return (
-        <Icon
+        <Icon //unlike button
           icon="fluent:heart-20-filled"
           width="30"
           height="30"
