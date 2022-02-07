@@ -72,7 +72,7 @@ export default (state = { posts: [] }, action) => {
         posts: [
           ...state.posts.slice(0, postIndex), //grabs from beginning of array to right before the post index.
           Object.assign({}, unlikedPost), //this is putting the newly updated post into a new object to be super clear with redux that there is a change in state (change of the post/less likes) so re-render happens
-          ...state.posts.slice(postIndex + 1), //this will start putting the rest of posts starting from right after the postIdx
+          ...state.posts.slice(postIndex + 1), //this will start putting the rest of posts starting from right after the post index.
         ],
       };
 
