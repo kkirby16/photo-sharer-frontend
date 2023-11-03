@@ -71,6 +71,7 @@ class Post extends Component {
             <img src={this.props.post.image_url} className="fitImage"></img>
           ) : (
             <img
+              crossOrigin="anonymous"
               src={this.props.post.seeded_image_data}
               className="fitImage"
             ></img>
