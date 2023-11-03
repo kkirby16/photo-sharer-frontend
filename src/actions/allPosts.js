@@ -16,8 +16,7 @@ export const getAllPosts = () => {
         Authorization: `Bearer ${localStorage.getItem("token")}`, //this is so we know who the user is. server will verify that the signature is correct and then send the response to the client.
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Origin":
-          "https://photo-sharer-kkirby16.netlify.app",
+        "Access-Control-Allow-Origin": "*",
       },
     })
       .then((r) => r.json())
