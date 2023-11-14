@@ -8,10 +8,15 @@ import "./myStyles.css";
 class CommentInput extends Component {
   constructor(props) {
     super(props);
+    this.commentInputRef = React.createRef();
     this.state = {
       comment: "",
     };
   }
+
+  handleReset = () => {
+    this.commentInputRef.current.value = "";
+  };
 
   handleChange = (event) => {
     event.preventDefault();
@@ -27,6 +32,7 @@ class CommentInput extends Component {
     this.setState({
       comment: "",
     });
+    this.handleReset();
   };
 
   //get post's id from props. when send form say attach this comment to this post id.
@@ -39,6 +45,7 @@ class CommentInput extends Component {
             name="text"
             onChange={this.handleChange}
             className="commentInput"
+            ref={this.commentInputRef}
           />
           <button
             type="submit"
