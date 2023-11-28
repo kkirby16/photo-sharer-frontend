@@ -4,6 +4,8 @@ import { removeComment } from "../actions/allPosts";
 
 import "./myStyles.css";
 import { Icon } from "@iconify/react";
+import Tooltip from "@mui/material/Tooltip";
+import Fade from "@material-ui/core/Fade";
 
 class Comment extends Component {
   can_delete_comment = () => {
@@ -25,21 +27,28 @@ class Comment extends Component {
           {this.props.comment.text}
         </li>
         {this.can_delete_comment() === true ? (
-          <Icon
-            icon="octicon:trash-24"
-            width="17"
-            height="17"
-            className="deleteCommentButton"
-            type="button"
-            onClick={() => {
-              this.props.removeComment(
-                this.props.post.id,
-                this.props.comment.id
-              );
-            }}
+          <Tooltip
+            title="Delete comment"
+            placement="right-start"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 0 }}
           >
-            {" "}
-          </Icon>
+            <Icon
+              icon="octicon:trash-24"
+              width="17"
+              height="17"
+              className="deleteCommentButton"
+              type="button"
+              onClick={() => {
+                this.props.removeComment(
+                  this.props.post.id,
+                  this.props.comment.id
+                );
+              }}
+            >
+              {" "}
+            </Icon>
+          </Tooltip>
         ) : null}
         <br></br>
       </div>
