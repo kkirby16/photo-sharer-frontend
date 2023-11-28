@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { addComment } from "../actions/allPosts.js";
 import { connect } from "react-redux";
 import "./myStyles.css";
+import Tooltip from "@mui/material/Tooltip";
+import Fade from "@material-ui/core/Fade";
 
 //have own state not redux state.
 
@@ -47,14 +49,21 @@ class CommentInput extends Component {
             className="commentInput"
             ref={this.commentInputRef}
           />
-          <button
-            type="submit"
-            value="Post comment"
-            className="textForComments postButtonLocation"
+          <Tooltip
+            title="Post comment"
+            placement="right-start"
+            TransitionComponent={Fade}
+            TransitionProps={{ timeout: 0 }}
           >
-            &nbsp; &nbsp;&nbsp;&nbsp;{" "}
-            <span className="postCommentLabel">Post</span>
-          </button>
+            <button
+              type="submit"
+              value="Post comment"
+              className="textForComments postButtonLocation"
+            >
+              &nbsp; &nbsp;&nbsp;&nbsp;{" "}
+              <span className="postCommentLabel">Post</span>
+            </button>
+          </Tooltip>
         </form>
       </div>
     );
