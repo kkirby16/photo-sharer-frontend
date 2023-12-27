@@ -10,6 +10,7 @@ function Home() {
   let descriptiveText = useRef(null);
   let signupText = useRef(null);
   let loginText = useRef(null);
+  let or_text = useRef(null);
 
   useEffect(() => {
     gsap.to(headingFirst, {
@@ -26,9 +27,9 @@ function Home() {
       delay: 0.1,
     });
     gsap.from(descriptiveText, {
-      duration: 1.1,
+      duration: 1.25,
       x: "-100vw",
-      delay: 0.05,
+      delay: 0.04,
       ease: "power2.in",
     });
     gsap.to(signupText, {
@@ -36,14 +37,21 @@ function Home() {
       opacity: 1,
       y: -20,
       ease: "power3",
-      delay: 0.1,
+      delay: 0.25,
     });
     gsap.to(loginText, {
       duration: 0.9,
       opacity: 1,
       y: -20,
       ease: "power3",
-      delay: 0.1,
+      delay: 0.75,
+    });
+    gsap.to(or_text, {
+      duration: 0.9,
+      opacity: 1,
+      y: -20,
+      ease: "power3",
+      delay: 0.5,
     });
   }, []);
 
@@ -104,7 +112,14 @@ function Home() {
         >
           sign up
         </Link>{" "}
-        <span className="or_text">&nbsp;&nbsp; or &nbsp;&nbsp;</span>{" "}
+        <span
+          className="or_text"
+          ref={(el) => {
+            or_text = el;
+          }}
+        >
+          &nbsp;&nbsp; or &nbsp;&nbsp;
+        </span>{" "}
         <Link
           to="/login"
           ref={(el) => {
