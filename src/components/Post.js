@@ -54,20 +54,27 @@ class Post extends Component {
       );
     } else {
       return (
-        <Icon //unlike button
-          icon="fluent:heart-20-filled"
-          width="30"
-          height="30"
-          className="unlikeButton"
-          color="#ed4956"
-          onClick={() =>
-            this.props.deleteLike(
-              this.props.currentUser.id,
-              this.props.post.id,
-              this.users_like()
-            )
-          }
-        />
+        <Tooltip
+          title="Unlike post"
+          placement="right-start"
+          TransitionComponent={Fade}
+          TransitionProps={{ timeout: 0 }}
+        >
+          <Icon //unlike button
+            icon="fluent:heart-20-filled"
+            width="30"
+            height="30"
+            className="unlikeButton"
+            color="#ed4956"
+            onClick={() =>
+              this.props.deleteLike(
+                this.props.currentUser.id,
+                this.props.post.id,
+                this.users_like()
+              )
+            }
+          />
+        </Tooltip>
       );
     }
   };
