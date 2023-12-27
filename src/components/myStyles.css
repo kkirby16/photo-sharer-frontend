@@ -35,6 +35,7 @@ button {
   color: white;
   position: relative;
   top: -2.5348542458809vh;
+  opacity: 0;
 }
 
 .interact_word {
