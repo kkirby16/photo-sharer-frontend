@@ -5,6 +5,7 @@ import Home from "./Home.js";
 import "./myStyles.css";
 import { connect } from "react-redux";
 import ScrollToTop from "react-scroll-to-top";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MainContainer = (props) => {
   if (props.currentUser !== null) {
