@@ -6,6 +6,7 @@ import "./myStyles.css";
 import { connect } from "react-redux";
 import ScrollToTop from "react-scroll-to-top";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const MainContainer = (props) => {
   if (props.currentUser !== null) {
@@ -17,7 +18,7 @@ const MainContainer = (props) => {
         <Posts posts={props.filteredPosts} currentUser={props.currentUser} />
         <ScrollToTop
           smooth
-          component={<FontAwesomeIcon icon="fal fa-arrow-to-top" />}
+          component={<FontAwesomeIcon icon={faChevronUp} />}
         />
       </div> //good idea for the main thing that is being returned from each component to get a div with the className spelled the exact same way as the component name.
     );
